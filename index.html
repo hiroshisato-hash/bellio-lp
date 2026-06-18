@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AIが会社の最初の対応を担う｜BELLiO AI Employee Platform</title>
-<meta name="description" content="BELLiOは24時間365日、あなたの会社の「最初の窓口」として電話対応を自動化。営業電話をブロックし、予約・問い合わせを受付。小規模〜中堅企業のすべての業種に対応。">
-<link rel="canonical" href="https://bellio.ai/">
+<title>AIが会社の電話番になります｜BELLiO</title>
+<meta name="description" content="BELLiOは会社にかかってくる電話を一次対応するAI電話番です。営業電話を自動ブロックし、必要な問い合わせだけを記録・通知します。士業・不動産・工務店・中小企業向け。">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://bellioai.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="AIが会社の最初の対応を担う｜BELLiO AI Employee Platform">
-<meta property="og:description" content="24時間365日、会社への電話をAIが自動対応。営業電話ブロック・予約受付・問い合わせ対応をすべて自動化。">
-<meta property="og:image" content="https://bellio.ai/images/og-image.png">
+<meta property="og:title" content="AIが会社の電話番になります｜BELLiO">
+<meta property="og:description" content="営業電話をブロックし、必要な問い合わせだけを届けるAI電話番。24時間365日、会社を守ります。">
+<meta property="og:image" content="https://bellioai.com/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,25 +43,22 @@
 }
 
 *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; }
-
 body {
   font-family: 'Noto Sans JP', sans-serif;
   color: var(--text);
   background: var(--white);
   -webkit-font-smoothing: antialiased;
   line-height: 1.7;
-  font-weight: 300;
+  font-weight: 400;
 }
-
-/* ─── Typography ─── */
 h1,h2,h3,h4,h5 {
   line-height: 1.2;
   font-weight: 700;
   font-family: 'Space Grotesk', 'Noto Sans JP', sans-serif;
   letter-spacing: -0.02em;
 }
+a { text-decoration: none; }
 
 .eyebrow {
   display: inline-flex;
@@ -81,9 +79,8 @@ section { padding: 96px 24px; }
 .section-center { text-align: center; }
 .section-center .section-title { margin: 0 auto 16px; }
 .section-center .section-body { max-width: 560px; margin: 0 auto 56px; }
-
 .section-title {
-  font-size: clamp(28px, 3.5vw, 40px);
+  font-size: clamp(28px, 3.5vw, 42px);
   color: var(--navy);
   margin-bottom: 14px;
 }
@@ -115,70 +112,59 @@ section { padding: 96px 24px; }
   font-size: 15px;
 }
 .btn-primary:hover { background: var(--navy-2); transform: translateY(-1px); box-shadow: var(--shadow-md); }
-
 .btn-yellow {
   background: var(--yellow);
   color: var(--navy);
-  padding: 16px 36px;
-  border-radius: 12px;
-  font-size: 16px;
+  padding: 15px 32px;
+  border-radius: 10px;
+  font-size: 15px;
 }
 .btn-yellow:hover { background: #e8b800; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(242,201,76,.4); }
-
 .btn-outline {
-  border: 2px solid var(--border);
+  border: 1.5px solid var(--border);
   color: var(--text-sub);
   background: var(--white);
-  padding: 14px 34px;
-  border-radius: 12px;
-  font-size: 16px;
+  padding: 13px 26px;
+  border-radius: 10px;
+  font-size: 15px;
 }
 .btn-outline:hover { border-color: var(--navy); color: var(--navy); }
-
 .btn-ghost {
   color: var(--text-sub);
-  padding: 12px 24px;
-  border-radius: 10px;
+  padding: 12px 20px;
+  border-radius: 8px;
   font-size: 14px;
   background: transparent;
+  font-weight: 500;
 }
-.btn-ghost:hover { background: var(--gray-100); color: var(--navy); }
+.btn-ghost:hover { color: var(--navy); }
 
 /* ─── Header ─── */
 #header {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 200;
-  background: rgba(255,255,255,.88);
+  background: rgba(255,255,255,.92);
   backdrop-filter: blur(16px) saturate(1.5);
-  border-bottom: 1px solid rgba(0,0,0,.06);
+  border-bottom: 1px solid rgba(0,0,0,.07);
   transition: box-shadow .2s;
 }
 #header.scrolled { box-shadow: var(--shadow-sm); }
 .header-inner {
   max-width: 1120px;
   margin: 0 auto;
-  height: 68px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 24px;
 }
-.logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-.logo img {
-  height: 36px;
-  width: auto;
-  display: block;
-}
-
+.logo { display: flex; align-items: center; text-decoration: none; }
+.logo img { height: 32px; width: auto; display: block; }
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
 }
 .nav-links a {
   font-family: 'Space Grotesk', sans-serif;
@@ -186,16 +172,17 @@ section { padding: 96px 24px; }
   font-weight: 500;
   color: var(--text-sub);
   text-decoration: none;
-  padding: 7px 14px;
+  padding: 6px 14px;
   border-radius: 8px;
   transition: all .15s;
   letter-spacing: -0.01em;
 }
 .nav-links a:hover { background: var(--gray-100); color: var(--navy); }
+.header-cta { display: flex; align-items: center; gap: 8px; }
 
 /* ─── Hero ─── */
 #hero {
-  padding: 140px 24px 80px;
+  padding: 136px 24px 80px;
   background: #F8F5EF;
   position: relative;
   overflow: hidden;
@@ -205,16 +192,16 @@ section { padding: 96px 24px; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 60% at 80% 30%, rgba(242,201,76,.10) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 40% at 5% 80%, rgba(15,23,42,.03) 0%, transparent 50%);
+    radial-gradient(ellipse 60% 60% at 80% 30%, rgba(242,201,76,.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 10% 90%, rgba(15,23,42,.04) 0%, transparent 50%);
   pointer-events: none;
 }
 .hero-grid {
   max-width: 1120px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 480px;
-  gap: 48px;
+  grid-template-columns: 1fr 460px;
+  gap: 64px;
   align-items: center;
   position: relative;
   z-index: 1;
@@ -225,11 +212,11 @@ section { padding: 96px 24px; }
   gap: 8px;
   background: var(--white);
   border: 1px solid var(--border);
-  padding: 6px 14px;
+  padding: 5px 14px;
   border-radius: 6px;
   font-family: 'Space Grotesk', sans-serif;
   font-size: 11px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--text-sub);
@@ -237,36 +224,35 @@ section { padding: 96px 24px; }
 }
 .hero-badge .pulse {
   width: 7px; height: 7px;
-  background: var(--yellow);
+  background: #22C55E;
   border-radius: 50%;
   animation: pulse 2.4s infinite;
 }
 @keyframes pulse {
-  0%,100% { opacity:1; transform: scale(1); }
-  50%      { opacity:.4; transform: scale(.8); }
+  0%,100% { opacity:1; transform: scale(1); box-shadow: 0 0 0 0 rgba(34,197,94,.4); }
+  50%      { opacity:.8; transform: scale(1.1); box-shadow: 0 0 0 4px rgba(34,197,94,0); }
 }
 .hero-h1 {
   font-family: 'Space Grotesk', 'Noto Sans JP', sans-serif;
-  font-size: clamp(34px, 4.5vw, 54px);
+  font-size: clamp(38px, 4.8vw, 58px);
   font-weight: 700;
   color: var(--navy);
-  line-height: 1.15;
-  letter-spacing: -1px;
-  margin-bottom: 22px;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+  margin-bottom: 24px;
 }
 .hero-h1 em {
   font-style: normal;
-  background: linear-gradient(135deg, #F2C94C 0%, #e8a100 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--yellow);
+  -webkit-text-stroke: 0;
 }
-.hero-body {
-  font-size: 17px;
+.hero-sub {
+  font-size: 16px;
   color: var(--text-sub);
-  line-height: 1.8;
-  margin-bottom: 32px;
-  max-width: 480px;
+  line-height: 1.85;
+  margin-bottom: 36px;
+  max-width: 440px;
+  font-weight: 400;
 }
 .hero-checks {
   list-style: none;
@@ -290,14 +276,15 @@ section { padding: 96px 24px; }
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
+.check-dot svg { display: block; }
 .hero-actions {
   display: flex;
-  gap: 14px;
+  gap: 10px;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
-.hero-sub-note {
+.hero-note {
   font-size: 12px;
   color: var(--text-muted);
 }
@@ -305,25 +292,24 @@ section { padding: 96px 24px; }
 /* Hero visual */
 .hero-visual {
   position: relative;
-}
-.bell-wrap {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.bell-svg {
+.hero-bell-img {
   width: 100%;
-  max-width: 380px;
+  max-width: 360px;
+  display: block;
+  margin: 0 auto;
   filter: drop-shadow(0 24px 48px rgba(15,23,42,.10));
+  position: relative;
+  z-index: 1;
 }
-
-/* Floating UI chips */
 .float-chip {
   position: absolute;
   background: var(--white);
-  border-radius: 14px;
-  padding: 10px 14px;
+  border-radius: 12px;
+  padding: 9px 14px;
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--border);
   font-size: 12px;
@@ -333,63 +319,33 @@ section { padding: 96px 24px; }
   align-items: center;
   gap: 8px;
   white-space: nowrap;
-  animation: floatUp 6s ease-in-out infinite;
+  z-index: 2;
+  animation: floatUp 5s ease-in-out infinite;
 }
-.float-chip:nth-child(2) { animation-delay: -2s; }
-.float-chip:nth-child(3) { animation-delay: -4s; }
-.float-chip:nth-child(4) { animation-delay: -1s; }
+.float-chip:nth-child(2) { animation-delay: -1.6s; }
+.float-chip:nth-child(3) { animation-delay: -3.2s; }
 @keyframes floatUp {
   0%,100% { transform: translateY(0); }
-  50%      { transform: translateY(-6px); }
+  50%      { transform: translateY(-7px); }
 }
-.chip-green  { color: #065F46; background: #ECFDF5; border-color: #A7F3D0; }
-.chip-red    { color: #991B1B; background: #FEF2F2; border-color: #FECACA; }
-.chip-blue   { color: #1E3A8A; background: #EFF6FF; border-color: #BFDBFE; }
-.chip-yellow { color: #92400E; background: var(--yellow-mid); border-color: var(--yellow); }
-
-/* ─── Stats bar ─── */
-#stats {
-  padding: 0;
-  background: var(--white);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-.stats-inner {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 28px 24px;
-  display: flex;
-  align-items: center;
-  gap: 0;
-}
-.stat-item {
-  flex: 1;
-  text-align: center;
-  padding: 4px 20px;
-  border-right: 1px solid var(--border);
-}
-.stat-item:last-child { border-right: none; }
-.stat-num {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-  color: var(--navy);
-  line-height: 1;
-  display: block;
-  letter-spacing: -0.03em;
-}
-.stat-label {
-  font-size: 11px;
-  color: var(--gray-400);
-  margin-top: 4px;
-  font-weight: 400;
-  letter-spacing: .2px;
+.chip-red   { color: #991B1B; background: #FEF2F2; border-color: #FECACA; }
+.chip-green { color: #065F46; background: #ECFDF5; border-color: #A7F3D0; }
+.chip-blue  { color: #1E3A8A; background: #EFF6FF; border-color: #BFDBFE; }
+.chip-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 /* ─── Problem ─── */
 #problem {
   background: var(--navy);
   color: var(--white);
+}
+.problem-inner { max-width: 1120px; margin: 0 auto; }
+.problem-head {
+  max-width: 560px;
+  margin-bottom: 52px;
 }
 .problem-eyebrow {
   display: inline-block;
@@ -398,198 +354,262 @@ section { padding: 96px 24px; }
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(255,255,255,.4);
-  margin-bottom: 20px;
+  color: rgba(255,255,255,.35);
+  margin-bottom: 18px;
 }
 .problem-title {
-  font-family: 'Space Grotesk', 'Noto Sans JP', sans-serif;
   font-size: clamp(26px, 3.5vw, 38px);
   font-weight: 700;
   color: var(--white);
-  margin-bottom: 12px;
-  line-height: 1.2;
+  line-height: 1.25;
   letter-spacing: -0.02em;
-}
-.problem-sub {
-  font-size: 16px;
-  color: rgba(255,255,255,.6);
-  margin-bottom: 56px;
 }
 .problem-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 16px;
 }
 .problem-card {
-  background: rgba(255,255,255,.05);
+  background: rgba(255,255,255,.04);
   border: 1px solid rgba(255,255,255,.08);
-  border-radius: 18px;
-  padding: 32px 28px;
-  position: relative;
-  overflow: hidden;
-  transition: background .2s;
-}
-.problem-card:hover { background: rgba(255,255,255,.08); }
-.problem-card::after {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--yellow), transparent);
-}
-.problem-num {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 48px;
-  font-weight: 700;
-  color: rgba(255,255,255,.05);
-  line-height: 1;
-  margin-bottom: 12px;
-  letter-spacing: -0.04em;
-}
-.problem-icon { margin-bottom: 14px; display: block; color: var(--yellow); }
-.problem-icon svg { display: block; }
-.solution-icon-wrap svg { display: block; color: white; }
-.feat-icon svg { display: block; color: white; }
-.problem-card h3 {
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 8px;
-}
-.problem-card p {
-  font-size: 14px;
-  color: rgba(255,255,255,.55);
-  line-height: 1.75;
-}
-
-/* ─── Solution pillars ─── */
-#solution {
-  background: var(--white);
-}
-.solution-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 0;
-}
-.solution-card {
-  border: 1.5px solid var(--border);
-  border-radius: 20px;
-  padding: 36px 30px;
-  position: relative;
-  overflow: hidden;
-  transition: all .25s;
-  cursor: default;
-}
-.solution-card:hover {
-  border-color: var(--yellow);
-  box-shadow: 0 8px 32px rgba(242,201,76,.14);
-  transform: translateY(-4px);
-}
-.solution-card.featured {
-  background: var(--navy);
-  border-color: var(--navy);
-}
-.solution-tag {
-  display: inline-block;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  padding: 3px 9px;
-  border-radius: 4px;
-  background: var(--gray-100);
-  color: var(--text-sub);
-  margin-bottom: 20px;
-}
-.solution-card.featured .solution-tag {
-  background: rgba(242,201,76,.2);
-  color: var(--yellow);
-}
-.solution-icon-wrap {
-  width: 40px; height: 40px;
-  border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  margin-bottom: 20px;
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.12);
-}
-.solution-card:not(.featured) .solution-icon-wrap {
-  background: var(--gray-100);
-  border: 1px solid var(--border);
-  color: var(--navy);
-}
-.solution-card:not(.featured) .solution-icon-wrap svg { color: var(--navy); }
-.solution-card h3 {
-  font-size: 19px;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 10px;
-}
-.solution-card.featured h3 { color: var(--white); }
-.solution-card p {
-  font-size: 14px;
-  color: var(--text-sub);
-  line-height: 1.75;
-}
-.solution-card.featured p { color: rgba(255,255,255,.65); }
-.solution-illust {
-  width: 100%;
-  max-width: 160px;
-  height: auto;
-  display: block;
-  margin: 0 0 16px;
-  filter: drop-shadow(0 8px 20px rgba(15,23,42,.08));
-}
-
-/* ─── Features ─── */
-#features {
-  background: var(--gray-50);
-}
-.features-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: end;
-  margin-bottom: 56px;
-}
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-.feat-card {
-  background: var(--white);
-  border: 1px solid var(--border);
   border-radius: 16px;
   padding: 28px 24px;
-  transition: all .2s;
+  transition: background .2s;
 }
-.feat-card:hover {
-  box-shadow: var(--shadow-md);
-  border-color: var(--gray-200);
-  transform: translateY(-3px);
+.problem-card:hover { background: rgba(255,255,255,.07); }
+.problem-icon {
+  width: 36px; height: 36px;
+  background: rgba(242,201,76,.12);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px;
+  color: var(--yellow);
 }
-.feat-icon {
-  display: none;
-}
-.feat-card h4 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 15px;
+.problem-card h3 {
+  font-size: 16px;
   font-weight: 600;
-  color: var(--navy);
-  margin-bottom: 8px;
-  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
 }
-.feat-card p {
+.problem-card p {
   font-size: 13px;
-  color: var(--text-sub);
-  line-height: 1.75;
-  font-weight: 300;
+  color: rgba(255,255,255,.45);
+  line-height: 1.7;
 }
 
-/* ─── Dashboard preview ─── */
+/* ─── Feature: 営業電話ブロック ─── */
+#feature {
+  background: var(--white);
+}
+.feature-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  gap: 80px;
+  align-items: center;
+}
+.feature-copy .eyebrow { color: var(--text-sub); }
+.feature-h2 {
+  font-size: clamp(28px, 3.5vw, 42px);
+  color: var(--navy);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.feature-body {
+  font-size: 16px;
+  color: var(--text-sub);
+  line-height: 1.85;
+  margin-bottom: 36px;
+}
+.feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 500;
+}
+.feature-list-icon {
+  width: 32px; height: 32px;
+  background: var(--gray-100);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  color: var(--navy);
+}
+.feature-visual {
+  position: relative;
+}
+.feature-img {
+  width: 100%;
+  max-width: 440px;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 20px 48px rgba(15,23,42,.10));
+}
+
+/* ─── Watchdog: AI番犬 ─── */
+#watchdog {
+  background: var(--cream);
+  overflow: hidden;
+  position: relative;
+}
+#watchdog::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(242,201,76,.10) 0%, transparent 70%);
+  pointer-events: none;
+}
+.watchdog-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.watchdog-img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  filter: drop-shadow(0 24px 48px rgba(15,23,42,.10));
+}
+.watchdog-copy .eyebrow { color: var(--text-sub); }
+.watchdog-h2 {
+  font-size: clamp(28px, 3.5vw, 42px);
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+.watchdog-body {
+  font-size: 16px;
+  color: var(--text-sub);
+  line-height: 1.85;
+  margin-bottom: 32px;
+}
+.watchdog-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.watchdog-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-sub);
+  line-height: 1.6;
+}
+.watchdog-points li::before {
+  content: '';
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: var(--yellow);
+  flex-shrink: 0;
+  margin-top: 3px;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L3.5 6.5L9 1' stroke='%230F172A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ─── Before / After ─── */
+#before-after {
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.before-after-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.before-after-head {
+  text-align: center;
+  margin-bottom: 52px;
+}
+.before-after-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.ba-col {
+  padding: 40px 36px;
+}
+.ba-col.ba-before {
+  background: var(--gray-50);
+  border-right: 1.5px solid var(--border);
+}
+.ba-col.ba-after {
+  background: var(--white);
+}
+.ba-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin-bottom: 28px;
+}
+.ba-before .ba-label { background: #FEF2F2; color: #991B1B; }
+.ba-after  .ba-label { background: #ECFDF5; color: #065F46; }
+.ba-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.ba-items li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.ba-before .ba-items li { color: var(--text-sub); }
+.ba-after  .ba-items li { color: var(--text); font-weight: 500; }
+.ba-icon-x {
+  width: 20px; height: 20px;
+  background: #FEF2F2;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  color: #EF4444;
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 1px;
+}
+.ba-icon-check {
+  width: 20px; height: 20px;
+  background: var(--yellow);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ─── Demo conversation ─── */
 #demo {
   background: var(--navy);
   overflow: hidden;
@@ -598,330 +618,405 @@ section { padding: 96px 24px; }
 #demo::before {
   content: '';
   position: absolute;
-  top: -100px; right: -150px;
-  width: 600px; height: 600px;
-  background: radial-gradient(circle, rgba(242,201,76,.12) 0%, transparent 65%);
+  top: -100px; left: 50%;
+  transform: translateX(-50%);
+  width: 700px; height: 400px;
+  background: radial-gradient(ellipse, rgba(242,201,76,.08) 0%, transparent 70%);
   pointer-events: none;
 }
-.demo-layout {
+.demo-inner {
+  max-width: 1120px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
+  grid-template-columns: 1fr 1fr;
   gap: 72px;
   align-items: center;
   position: relative;
   z-index: 1;
 }
-.demo-copy .eyebrow { background: rgba(242,201,76,.15); }
-.demo-title {
+.demo-copy .eyebrow { color: rgba(255,255,255,.35); letter-spacing: 2px; }
+.demo-h2 {
   font-size: clamp(24px, 3vw, 36px);
   font-weight: 700;
   color: var(--white);
-  margin-bottom: 14px;
-  line-height: 1.3;
+  margin-bottom: 16px;
+  line-height: 1.25;
 }
 .demo-body {
   font-size: 15px;
-  color: rgba(255,255,255,.6);
+  color: rgba(255,255,255,.55);
+  line-height: 1.85;
   margin-bottom: 32px;
-  line-height: 1.8;
 }
-.demo-points {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.demo-points li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 14px;
-  color: rgba(255,255,255,.7);
-  line-height: 1.6;
-}
-.demo-points li::before {
-  content: '';
-  width: 18px; height: 18px;
-  border-radius: 50%;
-  background: rgba(242,201,76,.2);
-  border: 1.5px solid var(--yellow);
-  flex-shrink: 0;
-  margin-top: 2px;
-  background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L3.5 6.5L9 1' stroke='%23F2C94C' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center;
+.demo-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(242,201,76,.1);
+  border: 1px solid rgba(242,201,76,.2);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 13px;
+  color: var(--yellow);
+  font-weight: 500;
 }
 
-/* Dashboard card */
-.dashboard-card {
-  background: #1a2744;
+/* Call log UI */
+.call-log {
+  background: #131f38;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: var(--shadow-xl);
   border: 1px solid rgba(255,255,255,.08);
+  box-shadow: var(--shadow-xl);
 }
-.dash-topbar {
+.call-log-bar {
   background: rgba(255,255,255,.04);
-  padding: 14px 18px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.call-log-dot { width: 9px; height: 9px; border-radius: 50%; }
+.call-log-title {
+  margin-left: 6px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,.35);
+  font-weight: 500;
+}
+.call-log-body { padding: 20px 18px; display: flex; flex-direction: column; gap: 12px; }
+.call-incoming {
+  background: rgba(242,201,76,.08);
+  border: 1px solid rgba(242,201,76,.15);
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.call-incoming-icon {
+  width: 32px; height: 32px;
+  background: var(--yellow);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  color: var(--navy);
+}
+.call-incoming-info .lbl { font-size: 10px; color: rgba(255,255,255,.35); letter-spacing: .5px; font-weight: 600; }
+.call-incoming-info .num { font-family: 'Space Grotesk', sans-serif; font-size: 14px; color: rgba(255,255,255,.85); font-weight: 600; }
+.conv-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.conv-row.right { flex-direction: row-reverse; }
+.conv-avatar {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+}
+.conv-avatar.ai { background: var(--navy); border: 1.5px solid rgba(255,255,255,.15); color: var(--yellow); }
+.conv-avatar.caller { background: rgba(255,255,255,.08); color: rgba(255,255,255,.5); font-size: 9px; }
+.conv-bubble {
+  padding: 8px 12px;
+  border-radius: 14px 14px 14px 4px;
+  font-size: 12px;
+  line-height: 1.55;
+  max-width: 75%;
+}
+.conv-row.left .conv-bubble { background: rgba(255,255,255,.06); color: rgba(255,255,255,.8); }
+.conv-row.right .conv-bubble { background: rgba(255,255,255,.1); color: rgba(255,255,255,.7); border-radius: 14px 14px 4px 14px; }
+.call-result {
   display: flex;
   align-items: center;
   gap: 8px;
-  border-bottom: 1px solid rgba(255,255,255,.06);
-}
-.dash-dot { width: 10px; height: 10px; border-radius: 50%; }
-.dash-title {
-  margin-left: 8px;
-  font-family: 'Outfit', sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  color: rgba(255,255,255,.5);
-}
-.dash-body { padding: 20px 18px; }
-.dash-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-bottom: 16px;
-}
-.dash-stat {
-  background: rgba(255,255,255,.05);
+  background: rgba(16,185,129,.08);
+  border: 1px solid rgba(16,185,129,.2);
   border-radius: 10px;
-  padding: 12px;
-  text-align: center;
+  padding: 10px 14px;
 }
-.dash-stat .n {
-  font-family: 'Outfit', sans-serif;
-  font-size: 22px;
-  font-weight: 800;
-  display: block;
-  margin-bottom: 2px;
+.call-result .dot { width: 8px; height: 8px; background: #34D399; border-radius: 50%; flex-shrink: 0; }
+.call-result span { font-size: 12px; color: #34D399; font-weight: 600; }
+
+/* ─── Industry ─── */
+#industry {
+  background: var(--gray-50);
 }
-.dash-stat .l { font-size: 10px; color: rgba(255,255,255,.4); }
-.dash-list { display: flex; flex-direction: column; gap: 8px; }
-.dash-row {
+.industry-inner { max-width: 1120px; margin: 0 auto; }
+.industry-head { text-align: center; margin-bottom: 52px; }
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.industry-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 18px;
+  padding: 32px 28px;
+  transition: all .2s;
+}
+.industry-card:hover {
+  border-color: var(--navy);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+.industry-icon {
+  width: 44px; height: 44px;
+  background: var(--navy);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px;
+  color: var(--yellow);
+}
+.industry-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.industry-card .industry-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+.industry-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.industry-items li {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 9px 12px;
-  background: rgba(255,255,255,.04);
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,.05);
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-sub);
 }
-.dash-row .ico {
-  width: 30px; height: 30px;
-  border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 14px;
+.industry-items li::before {
+  content: '';
+  width: 5px; height: 5px;
+  background: var(--yellow);
+  border-radius: 50%;
   flex-shrink: 0;
 }
-.dash-row .info { flex: 1; min-width: 0; }
-.dash-row .info .t {
-  font-size: 12px;
-  font-weight: 600;
-  color: rgba(255,255,255,.85);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+
+/* ─── ROI ─── */
+#roi {
+  background: var(--cream);
 }
-.dash-row .info .s { font-size: 11px; color: rgba(255,255,255,.35); }
-.dash-row .badge {
-  font-size: 10px;
-  font-weight: 700;
-  padding: 3px 8px;
+.roi-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  gap: 80px;
+  align-items: center;
+}
+.roi-copy .eyebrow { color: var(--text-sub); }
+.roi-h2 {
+  font-size: clamp(26px, 3vw, 38px);
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+.roi-body {
+  font-size: 15px;
+  color: var(--text-sub);
+  line-height: 1.85;
+}
+.roi-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
   border-radius: 20px;
-  flex-shrink: 0;
+  padding: 36px 32px;
+  box-shadow: var(--shadow-md);
 }
-.badge-green  { background: rgba(16,185,129,.15); color: #34D399; }
-.badge-red    { background: rgba(239,68,68,.15); color: #F87171; }
-.badge-yellow { background: rgba(242,201,76,.15); color: var(--yellow); }
+.roi-calc {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+.roi-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text-sub);
+}
+.roi-row span:last-child { font-weight: 600; color: var(--text); }
+.roi-total {
+  text-align: center;
+}
+.roi-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+  letter-spacing: -2px;
+  display: block;
+}
+.roi-num-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 6px;
+  display: block;
+}
+.roi-footnote {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+/* ─── Trust ─── */
+#trust {
+  background: var(--white);
+}
+.trust-inner { max-width: 1120px; margin: 0 auto; }
+.trust-head { text-align: center; margin-bottom: 52px; }
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.trust-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  background: var(--gray-50);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+.trust-icon {
+  width: 40px; height: 40px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  color: var(--navy);
+}
+.trust-text h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+.trust-text p {
+  font-size: 12px;
+  color: var(--text-sub);
+  line-height: 1.65;
+}
 
 /* ─── Steps ─── */
 #steps {
-  background: var(--white);
+  background: var(--gray-50);
 }
-.steps-layout {
-  display: grid;
-  grid-template-columns: 420px 1fr;
-  gap: 80px;
-  align-items: start;
+.steps-inner {
+  max-width: 800px;
+  margin: 0 auto;
 }
+.steps-head { text-align: center; margin-bottom: 52px; }
 .steps-list { display: flex; flex-direction: column; gap: 0; }
 .step {
   display: flex;
-  gap: 20px;
-  padding-bottom: 36px;
+  gap: 24px;
+  padding-bottom: 40px;
   position: relative;
 }
 .step:not(:last-child)::before {
   content: '';
   position: absolute;
-  left: 18px;
-  top: 40px;
+  left: 19px;
+  top: 42px;
   bottom: 0;
   width: 2px;
   background: linear-gradient(to bottom, var(--yellow) 0%, var(--border) 100%);
 }
 .step-num {
-  width: 38px; height: 38px;
+  width: 40px; height: 40px;
   border-radius: 50%;
   background: var(--navy);
   color: var(--white);
-  font-family: 'Outfit', sans-serif;
-  font-weight: 800;
-  font-size: 15px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
   position: relative;
   z-index: 1;
-  box-shadow: 0 0 0 4px var(--white), 0 0 0 6px var(--border);
+  box-shadow: 0 0 0 4px var(--gray-50), 0 0 0 6px var(--border);
 }
-.step:nth-child(4) .step-num { background: var(--yellow); color: var(--navy); }
+.step:last-child .step-num { background: var(--yellow); color: var(--navy); }
+.step-content { padding-top: 8px; }
 .step-content h3 {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 700;
   color: var(--navy);
-  margin-bottom: 4px;
-  padding-top: 7px;
+  margin-bottom: 6px;
 }
-.step-content p { font-size: 13px; color: var(--text-sub); line-height: 1.7; }
-.steps-note {
-  margin-top: 24px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  color: var(--text-sub);
-  background: var(--gray-50);
-  padding: 12px 16px;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-}
-
-/* Steps visual (image01) */
-.steps-visual {
-  position: sticky;
-  top: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-.steps-illust {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  filter: drop-shadow(0 20px 40px rgba(15,23,42,.10));
-}
-.steps-caption {
-  font-size: 13px;
-  color: var(--text-sub);
-  text-align: center;
-  line-height: 1.6;
-}
-
-/* Phone mockup in steps */
-.phone-mockup {
-  position: sticky;
-  top: 100px;
-  background: var(--white);
-  border: 1.5px solid var(--border);
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: var(--shadow-xl);
-}
-.phone-bar {
-  background: var(--gray-50);
-  padding: 12px 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  border-bottom: 1px solid var(--border);
-}
-.phone-bar-dot { width: 9px; height: 9px; border-radius: 50%; }
-.phone-body { padding: 16px; }
-.call-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px;
-  background: var(--yellow-pale);
-  border-radius: 10px;
-  margin-bottom: 14px;
-  border: 1px solid var(--yellow-mid);
-}
-.call-header .bell-avatar {
-  width: 36px; height: 36px;
-  border-radius: 50%;
-  background: var(--navy);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 16px;
-  flex-shrink: 0;
-}
-.call-info .label { font-size: 10px; color: var(--text-muted); font-weight: 600; letter-spacing: .5px; }
-.call-info .number { font-size: 15px; font-weight: 700; color: var(--navy); font-family: 'Outfit', sans-serif; }
-.chat-list { display: flex; flex-direction: column; gap: 10px; }
-.chat-msg {
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
-}
-.chat-msg.me { flex-direction: row-reverse; }
-.chat-avatar {
-  width: 26px; height: 26px;
-  border-radius: 50%;
-  background: var(--navy);
-  flex-shrink: 0;
-  font-size: 11px;
-  display: flex; align-items: center; justify-content: center;
-  color: white;
+.step-content p { font-size: 14px; color: var(--text-sub); line-height: 1.75; }
+.step-tag {
+  display: inline-block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10px;
   font-weight: 700;
-}
-.chat-bubble {
-  background: var(--gray-100);
-  border-radius: 14px 14px 14px 4px;
-  padding: 8px 12px;
-  font-size: 12px;
-  color: var(--text);
-  max-width: 80%;
-  line-height: 1.5;
-}
-.chat-msg.me .chat-bubble {
-  background: var(--navy);
-  color: var(--white);
-  border-radius: 14px 14px 4px 14px;
-}
-.chat-status {
-  font-size: 11px;
-  color: var(--text-muted);
-  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--yellow-mid);
+  color: #92400E;
   margin-top: 8px;
-  padding: 6px 10px;
-  background: var(--gray-50);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
 }
 
 /* ─── Pricing ─── */
 #pricing {
   background: var(--cream);
 }
+.pricing-head { text-align: center; margin-bottom: 16px; }
+.pricing-campaign {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(242,201,76,.15);
+  border: 1px solid rgba(242,201,76,.3);
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #92400E;
+  margin-bottom: 48px;
+}
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin-top: 56px;
   align-items: start;
+  max-width: 900px;
+  margin: 0 auto;
 }
 .pricing-card {
   background: var(--white);
   border: 1.5px solid var(--border);
-  border-radius: 22px;
-  padding: 36px 30px;
+  border-radius: 20px;
+  padding: 34px 28px;
   position: relative;
   transition: all .2s;
+  display: flex;
+  flex-direction: column;
 }
 .pricing-card:hover:not(.pricing-featured) {
   box-shadow: var(--shadow-md);
@@ -936,18 +1031,19 @@ section { padding: 96px 24px; }
 }
 .pricing-badge {
   position: absolute;
-  top: -14px; left: 50%;
+  top: -13px; left: 50%;
   transform: translateX(-50%);
   background: var(--yellow);
   color: var(--navy);
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 11px;
-  font-weight: 800;
-  padding: 4px 16px;
+  font-weight: 700;
+  padding: 3px 14px;
   border-radius: 20px;
   white-space: nowrap;
-  letter-spacing: .3px;
 }
 .plan-tier {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -955,45 +1051,29 @@ section { padding: 96px 24px; }
   color: var(--gray-400);
   margin-bottom: 10px;
 }
-.pricing-featured .plan-tier { color: rgba(255,255,255,.45); }
+.pricing-featured .plan-tier { color: rgba(255,255,255,.4); }
 .plan-price-row {
   display: flex;
   align-items: baseline;
   gap: 4px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
-.plan-yen {
-  font-family: 'Outfit', sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--navy);
-}
+.plan-yen { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; color: var(--navy); }
 .pricing-featured .plan-yen { color: var(--white); }
-.plan-amount {
-  font-family: 'Outfit', sans-serif;
-  font-size: 42px;
-  font-weight: 900;
-  color: var(--navy);
-  line-height: 1;
-}
+.plan-amount { font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 700; color: var(--navy); line-height: 1; letter-spacing: -1px; }
 .pricing-featured .plan-amount { color: var(--white); }
-.plan-per {
-  font-size: 14px;
-  color: var(--gray-400);
-}
-.pricing-featured .plan-per { color: rgba(255,255,255,.45); }
+.plan-amount.contact { font-size: 28px; letter-spacing: 0; }
+.plan-per { font-size: 13px; color: var(--gray-400); }
+.pricing-featured .plan-per { color: rgba(255,255,255,.4); }
 .plan-desc {
   font-size: 13px;
   color: var(--text-sub);
-  margin-bottom: 24px;
+  margin: 12px 0 20px;
   line-height: 1.6;
   border-bottom: 1px solid var(--border);
   padding-bottom: 20px;
 }
-.pricing-featured .plan-desc {
-  color: rgba(255,255,255,.55);
-  border-color: rgba(255,255,255,.1);
-}
+.pricing-featured .plan-desc { color: rgba(255,255,255,.5); border-color: rgba(255,255,255,.1); }
 .plan-features {
   list-style: none;
   display: flex;
@@ -1005,178 +1085,104 @@ section { padding: 96px 24px; }
 .plan-features li {
   display: flex;
   align-items: flex-start;
-  gap: 9px;
+  gap: 8px;
   font-size: 13px;
   color: var(--text-sub);
   line-height: 1.5;
 }
-.pricing-featured .plan-features li { color: rgba(255,255,255,.75); }
-.plan-features li::before {
-  content: '';
+.pricing-featured .plan-features li { color: rgba(255,255,255,.7); }
+.plan-check {
   width: 16px; height: 16px;
+  background: var(--gray-100);
   border-radius: 50%;
   flex-shrink: 0;
   margin-top: 1px;
-  background: var(--gray-100)
-    url("data:image/svg+xml,%3Csvg width='9' height='7' viewBox='0 0 9 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.5L3.2 5.7L8 1' stroke='%2364748B' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
-    no-repeat center;
+  background-image: url("data:image/svg+xml,%3Csvg width='9' height='7' viewBox='0 0 9 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.5L3.2 5.7L8 1' stroke='%2364748B' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.pricing-featured .plan-features li::before {
+.pricing-featured .plan-check {
   background-color: rgba(242,201,76,.2);
   background-image: url("data:image/svg+xml,%3Csvg width='9' height='7' viewBox='0 0 9 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.5L3.2 5.7L8 1' stroke='%23F2C94C' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
-.pricing-note {
-  text-align: center;
-  font-size: 13px;
-  color: var(--text-muted);
-  margin-top: 24px;
-}
+.pricing-note { text-align: center; font-size: 12px; color: var(--text-muted); margin-top: 20px; }
 
 /* ─── FAQ ─── */
-#faq {
-  background: var(--white);
-}
-.faq-wrap {
-  max-width: 680px;
-  margin: 0 auto;
-}
-.faq-item {
-  border-bottom: 1px solid var(--border);
-}
+#faq { background: var(--white); }
+.faq-wrap { max-width: 680px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid var(--border); }
 .faq-q {
-  width: 100%;
-  background: none;
-  border: none;
-  text-align: left;
-  padding: 20px 0;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--navy);
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  font-family: 'Noto Sans JP', sans-serif;
-  transition: color .2s;
+  width: 100%; background: none; border: none; text-align: left;
+  padding: 20px 0; font-size: 15px; font-weight: 600; color: var(--navy);
+  cursor: pointer; display: flex; justify-content: space-between;
+  align-items: center; gap: 16px;
+  font-family: 'Noto Sans JP', sans-serif; transition: color .2s;
 }
-.faq-q:hover { color: #2563EB; }
+.faq-q:hover { color: var(--navy-2); }
 .faq-chevron {
-  width: 26px; height: 26px;
-  border-radius: 50%;
+  width: 26px; height: 26px; border-radius: 50%;
   border: 1.5px solid var(--border);
   display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-  transition: all .3s;
-  font-size: 14px;
+  flex-shrink: 0; transition: all .3s;
   color: var(--gray-400);
 }
-.faq-item.open .faq-chevron {
-  transform: rotate(180deg);
-  background: var(--navy);
-  border-color: var(--navy);
-  color: var(--white);
-}
+.faq-item.open .faq-chevron { transform: rotate(180deg); background: var(--navy); border-color: var(--navy); color: var(--white); }
 .faq-a {
-  font-size: 14px;
-  color: var(--text-sub);
-  line-height: 1.85;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .4s ease, padding .3s;
+  font-size: 14px; color: var(--text-sub); line-height: 1.85;
+  max-height: 0; overflow: hidden; transition: max-height .4s ease, padding .3s;
 }
 .faq-item.open .faq-a { max-height: 300px; padding-bottom: 20px; }
 
 /* ─── CTA ─── */
 #cta {
   background: var(--navy);
-  position: relative;
-  overflow: hidden;
-  padding: 96px 24px;
-  text-align: center;
+  position: relative; overflow: hidden; padding: 96px 24px; text-align: center;
 }
 #cta::before {
   content: '';
-  position: absolute;
-  inset: 0;
+  position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 60% 80% at 50% 0%,   rgba(242,201,76,.12) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 40% at 80% 100%, rgba(242,201,76,.08) 0%, transparent 50%);
+    radial-gradient(ellipse 70% 70% at 50% 0%, rgba(242,201,76,.10) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 80% 100%, rgba(242,201,76,.06) 0%, transparent 50%);
   pointer-events: none;
 }
-.cta-bell {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 28px;
-}
+.cta-inner { position: relative; z-index: 1; }
 .cta-title {
   font-size: clamp(26px, 4vw, 44px);
-  font-weight: 900;
+  font-weight: 700;
   color: var(--white);
   line-height: 1.3;
   margin-bottom: 14px;
   letter-spacing: -0.5px;
-  position: relative;
-  z-index: 1;
 }
 .cta-body {
   font-size: 16px;
-  color: rgba(255,255,255,.6);
+  color: rgba(255,255,255,.55);
   margin-bottom: 36px;
-  position: relative;
-  z-index: 1;
+  line-height: 1.8;
 }
 .cta-actions {
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-  z-index: 1;
+  display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
 }
 .btn-cta-main {
-  background: var(--yellow);
-  color: var(--navy);
-  padding: 18px 44px;
-  border-radius: 14px;
-  font-size: 17px;
-  font-weight: 800;
-  font-family: 'Noto Sans JP', sans-serif;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: all .2s;
-  border: none;
-  cursor: pointer;
+  background: var(--yellow); color: var(--navy);
+  padding: 16px 40px; border-radius: 12px;
+  font-size: 16px; font-weight: 700;
+  font-family: 'Space Grotesk', 'Noto Sans JP', sans-serif;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+  transition: all .2s; border: none; cursor: pointer; letter-spacing: -0.01em;
 }
-.btn-cta-main:hover {
-  background: #e8b800;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 36px rgba(242,201,76,.45);
-}
+.btn-cta-main:hover { background: #e8b800; transform: translateY(-2px); box-shadow: 0 12px 36px rgba(242,201,76,.4); }
 .btn-cta-sub {
-  border: 1.5px solid rgba(255,255,255,.25);
-  color: var(--white);
-  padding: 16px 42px;
-  border-radius: 14px;
-  font-size: 17px;
-  font-weight: 600;
-  font-family: 'Noto Sans JP', sans-serif;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  border: 1.5px solid rgba(255,255,255,.2);
+  color: var(--white); padding: 16px 36px; border-radius: 12px;
+  font-size: 15px; font-weight: 600;
+  font-family: 'Space Grotesk', 'Noto Sans JP', sans-serif;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
   transition: all .2s;
 }
-.btn-cta-sub:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.5); }
-.cta-footnote {
-  font-size: 12px;
-  color: rgba(255,255,255,.35);
-  margin-top: 18px;
-  position: relative;
-  z-index: 1;
-}
+.btn-cta-sub:hover { background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.45); }
+.cta-footnote { font-size: 12px; color: rgba(255,255,255,.3); margin-top: 18px; }
 
 /* ─── Footer ─── */
 footer {
@@ -1193,579 +1199,391 @@ footer {
   border-bottom: 1px solid rgba(255,255,255,.07);
   margin-bottom: 24px;
 }
-.footer-brand-name {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 900;
-  font-size: 20px;
-  letter-spacing: -0.5px;
-  color: var(--white);
-  display: flex;
-  align-items: baseline;
-  margin-bottom: 4px;
-}
-.footer-tagline {
-  font-family: 'Outfit', sans-serif;
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.3);
-  margin-bottom: 12px;
-}
 .footer-desc {
-  font-size: 13px;
-  color: rgba(255,255,255,.4);
-  line-height: 1.75;
-  max-width: 280px;
+  font-size: 13px; color: rgba(255,255,255,.35); line-height: 1.75;
+  max-width: 260px; margin-top: 14px;
 }
-.footer-nav {
-  display: flex;
-  gap: 52px;
-}
+.footer-nav { display: flex; gap: 52px; }
 .footer-col h5 {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.35);
-  margin-bottom: 14px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+  text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 14px;
 }
 .footer-col a {
-  display: block;
-  font-size: 13px;
-  color: rgba(255,255,255,.55);
-  text-decoration: none;
-  margin-bottom: 9px;
-  transition: color .2s;
+  display: block; font-size: 13px; color: rgba(255,255,255,.5);
+  text-decoration: none; margin-bottom: 9px; transition: color .2s;
 }
 .footer-col a:hover { color: var(--white); }
 .footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 11px;
-  color: rgba(255,255,255,.25);
-  flex-wrap: wrap;
-  gap: 8px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 11px; color: rgba(255,255,255,.2); flex-wrap: wrap; gap: 8px;
 }
 
-/* ─── Reveal animation ─── */
+/* ─── Reveal ─── */
 .reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity .65s ease, transform .65s ease;
+  opacity: 0; transform: translateY(20px);
+  transition: opacity .6s ease, transform .6s ease;
 }
 .reveal.visible { opacity: 1; transform: none; }
 .reveal-delay-1 { transition-delay: .1s; }
 .reveal-delay-2 { transition-delay: .2s; }
 .reveal-delay-3 { transition-delay: .3s; }
+.reveal-delay-4 { transition-delay: .4s; }
 
 /* ─── Responsive ─── */
 @media (max-width: 960px) {
   .hero-grid { grid-template-columns: 1fr; }
   .hero-visual { order: -1; }
-  .problem-cards,
-  .solution-grid,
-  .features-grid,
-  .pricing-grid { grid-template-columns: 1fr; }
+  .problem-cards { grid-template-columns: 1fr 1fr; }
+  .feature-inner { grid-template-columns: 1fr; }
+  .watchdog-inner { grid-template-columns: 1fr; }
+  .watchdog-img { max-width: 280px; margin: 0 auto; }
+  .before-after-grid { grid-template-columns: 1fr; }
+  .ba-col.ba-before { border-right: none; border-bottom: 1.5px solid var(--border); }
+  .demo-inner { grid-template-columns: 1fr; }
+  .industry-grid { grid-template-columns: 1fr; }
+  .roi-inner { grid-template-columns: 1fr; }
+  .trust-grid { grid-template-columns: 1fr 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; max-width: 480px; }
   .pricing-featured { transform: none; }
-  .demo-layout,
-  .steps-layout { grid-template-columns: 1fr; }
-  .features-header { grid-template-columns: 1fr; gap: 16px; }
   .nav-links { display: none; }
   .footer-top { grid-template-columns: 1fr; }
   .footer-nav { gap: 28px; flex-wrap: wrap; }
-  .steps-layout .phone-mockup { position: static; }
 }
-@media (max-width: 600px) {
-  section { padding: 72px 16px; }
-  #hero { padding: 120px 16px 72px; }
-  .hero-actions,
-  .cta-actions { flex-direction: column; }
-  .btn-yellow, .btn-outline, .btn-cta-main, .btn-cta-sub {
-    width: 100%; max-width: 360px; justify-content: center;
-  }
-}
-
-/* ─── Hero BELL Character ─── */
-.bell-character-wrap {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.bell-char-svg {
-  width: 100%;
-  max-width: 340px;
-  display: block;
-  margin: 0 auto;
-  filter: drop-shadow(0 24px 40px rgba(15,23,42,.10));
-}
-.bell-hi-text {
-  position: absolute;
-  top: 6%;
-  right: 4%;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--navy);
-  letter-spacing: -0.5px;
-  transform: rotate(2deg);
-  opacity: 0.75;
-}
-.bell-hi-text::after {
-  content: '';
-  display: block;
-  height: 2px;
-  background: var(--yellow);
-  border-radius: 2px;
-  margin-top: 2px;
-  width: 60%;
-}
-
-/* ─── Hero Product UI card ─── */
-.hero-product-wrap { position: relative; width: 100%; }
-.hero-ui-card {
-  background: var(--white);
-  border: 1.5px solid var(--border);
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 24px 64px rgba(15,23,42,.13), 0 4px 16px rgba(15,23,42,.06);
-}
-.ui-chrome {
-  background: var(--gray-50);
-  padding: 11px 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  border-bottom: 1px solid var(--border);
-}
-.ui-chrome-dots { display: flex; gap: 5px; }
-.ui-chrome-dots span { width: 10px; height: 10px; border-radius: 50%; display: block; }
-.ui-chrome-label {
-  flex: 1;
-  text-align: center;
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--gray-400);
-  font-family: 'Outfit', sans-serif;
-}
-.ui-live-bar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 11px 16px;
-  background: #FFFBEB;
-  border-bottom: 1px solid #FEF3C7;
-}
-.ui-live-pulse {
-  width: 8px; height: 8px;
-  background: #F59E0B;
-  border-radius: 50%;
-  animation: pulse 2s infinite;
-  flex-shrink: 0;
-}
-.ui-live-tag {
-  font-size: 11px;
-  font-weight: 700;
-  color: #92400E;
-  letter-spacing: .5px;
-  text-transform: uppercase;
-}
-.ui-live-num {
-  margin-left: auto;
-  font-family: 'Outfit', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--navy);
-}
-.ui-messages {
-  padding: 14px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-}
-.ui-row { display: flex; align-items: flex-start; gap: 9px; }
-.ui-row.from-user { flex-direction: row-reverse; }
-.ui-ava {
-  width: 28px; height: 28px;
-  border-radius: 50%;
-  background: var(--navy);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 11px; font-weight: 800;
-  color: white;
-  flex-shrink: 0;
-  font-family: 'Outfit', sans-serif;
-}
-.ui-ava.ai-bell { background: var(--yellow); color: var(--navy); }
-.ui-bubble {
-  background: var(--gray-100);
-  border-radius: 12px 12px 12px 3px;
-  padding: 8px 12px;
-  font-size: 12.5px;
-  color: var(--text);
-  max-width: 80%;
-  line-height: 1.55;
-}
-.ui-row.from-user .ui-bubble {
-  background: var(--navy);
-  color: white;
-  border-radius: 12px 12px 3px 12px;
-}
-.ui-complete {
-  padding: 10px 16px;
-  background: #F0FDF4;
-  border-top: 1px solid #BBF7D0;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #065F46;
-}
-.ui-complete-dot {
-  width: 16px; height: 16px;
-  background: #10B981;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-  color: white;
-  font-size: 9px;
-}
-.hero-mini-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-top: 12px;
-}
-.mini-stat-pill {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 12px 14px;
-  box-shadow: var(--shadow-sm);
-}
-.mini-stat-pill .msn {
-  font-family: 'Outfit', sans-serif;
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--navy);
-  display: block;
-  line-height: 1;
-  margin-bottom: 3px;
-}
-.mini-stat-pill .msl {
-  font-size: 10px;
-  color: var(--gray-400);
-  font-weight: 500;
+@media (max-width: 640px) {
+  section { padding: 72px 20px; }
+  .problem-cards { grid-template-columns: 1fr; }
+  .trust-grid { grid-template-columns: 1fr; }
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+  .cta-actions { flex-direction: column; align-items: center; }
 }
 </style>
 </head>
 <body>
 
-<!-- ══════════ HEADER ══════════ -->
+<!-- ─── Header ─── -->
 <header id="header">
   <div class="header-inner">
     <a href="/" class="logo">
       <img src="images/logo.png" alt="BELLiO">
     </a>
     <nav class="nav-links">
-      <a href="#solution">機能</a>
+      <a href="#feature">機能</a>
       <a href="#steps">使い方</a>
       <a href="#pricing">料金</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a href="#cta" class="btn btn-primary">無料で試す →</a>
+    <div class="header-cta">
+      <a href="#demo" class="btn btn-ghost">デモを聞く</a>
+      <a href="#cta" class="btn btn-primary">無料相談 →</a>
+    </div>
   </div>
 </header>
 
-<!-- ══════════ HERO ══════════ -->
+<!-- ─── Hero ─── -->
 <section id="hero">
-  <div class="hero-grid container">
-    <div class="hero-copy">
+  <div class="hero-grid">
+    <div class="hero-copy reveal">
       <div class="hero-badge">
         <span class="pulse"></span>
-        AI Employee Platform
+        AI PHONE GUARD · 24H 365 DAYS
       </div>
-      <h1 class="hero-h1">
-        AIが、会社の<br>
-        最初の対応を<br>
-        <em>担います。</em>
-      </h1>
-      <p class="hero-body">
-        BELLiOは24時間365日、あなたの会社の<br>
-        「最初の窓口」として電話対応を自動化する<br>
-        AI従業員プラットフォームです。
-      </p>
+      <h1 class="hero-h1">AIが会社の<br><em>電話番</em>に<br>なります。</h1>
+      <p class="hero-sub">BELLiO AIは、会社にかかってくる電話を一次対応するAI電話番です。営業電話を自動判定し、必要な問い合わせだけを記録・通知します。</p>
       <ul class="hero-checks">
-        <li><span class="check-dot"><svg width="11" height="8" viewBox="0 0 11 8" fill="none"><path d="M1 4L3.5 6.5L10 1" stroke="#0F172A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>電話対応を自動化</li>
-        <li><span class="check-dot"><svg width="11" height="8" viewBox="0 0 11 8" fill="none"><path d="M1 4L3.5 6.5L10 1" stroke="#0F172A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>営業電話をブロック</li>
-        <li><span class="check-dot"><svg width="11" height="8" viewBox="0 0 11 8" fill="none"><path d="M1 4L3.5 6.5L10 1" stroke="#0F172A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>予約・問い合わせを受付</li>
+        <li>
+          <span class="check-dot">
+            <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          営業電話を自動ブロック
+        </li>
+        <li>
+          <span class="check-dot">
+            <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          必要な問い合わせだけを通知・転送
+        </li>
+        <li>
+          <span class="check-dot">
+            <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          24時間365日、営業時間外も対応
+        </li>
       </ul>
       <div class="hero-actions">
-        <a href="#cta" class="btn btn-yellow">14日間無料で試す →</a>
-        <a href="#demo" class="btn btn-outline">デモを見る</a>
+        <a href="#demo" class="btn btn-yellow">デモを聞く ▶</a>
+        <a href="#cta" class="btn btn-primary">無料相談</a>
+        <a href="#pricing" class="btn btn-ghost">料金を見る →</a>
       </div>
-      <p class="hero-sub-note">クレジットカード不要 · 最短3分で導入 · いつでも解約可</p>
+      <p class="hero-note">クレジットカード不要 · 最短1日で導入</p>
     </div>
 
-    <div class="hero-visual">
-      <div class="bell-character-wrap">
-        <!-- Hi, I'm BELL. accent -->
-        <div class="bell-hi-text">Hi, I'm BELL.</div>
-        <img src="images/bell.png" alt="BELL" class="bell-char-svg">
-        <!-- legacy SVG hidden -->
-        <svg style="display:none" viewBox="0 0 300 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="148" cy="372" rx="88" ry="10" fill="rgba(15,23,42,.07)"/>
-          <!-- Tail — curled up from right side of body -->
-          <path d="M196 288 C226 262 240 222 218 190" stroke="#0F172A" stroke-width="7.5" stroke-linecap="round"/>
-          <!-- Body — compact oval -->
-          <ellipse cx="142" cy="310" rx="92" ry="64" fill="white" stroke="#0F172A" stroke-width="4.5"/>
-          <!-- Front paws -->
-          <ellipse cx="92" cy="348" rx="30" ry="15" fill="white" stroke="#0F172A" stroke-width="4.5"/>
-          <ellipse cx="192" cy="348" rx="30" ry="15" fill="white" stroke="#0F172A" stroke-width="4.5"/>
-
-          <!-- ── EARS drawn first so head sits on top ── -->
-          <!-- Left ear: teardrop hanging from upper-left of head, wide droop -->
-          <path d="M108 98 C84 106 50 142 48 182 C46 210 62 232 82 232 C100 232 114 216 114 192 C114 164 110 124 108 98 Z" fill="#0F172A"/>
-          <!-- Right ear: mirror -->
-          <path d="M192 98 C216 106 250 142 252 182 C254 210 238 232 218 232 C200 232 186 216 186 192 C186 164 190 124 192 98 Z" fill="#0F172A"/>
-
-          <!-- ── HEAD (white circle drawn over ears — creates clean separation) ── -->
-          <circle cx="150" cy="148" r="76" fill="white" stroke="#0F172A" stroke-width="4.5"/>
-
-          <!-- Dark saddle cap — only top ~30% of head -->
-          <path d="M92 118 C98 84 120 66 150 66 C180 66 202 84 208 118 C200 128 184 136 164 139 C156 141 150 142 144 141 C124 138 100 128 92 118 Z" fill="#0F172A"/>
-
-          <!-- Muzzle — prominent, protrudes from face -->
-          <ellipse cx="150" cy="178" rx="38" ry="30" fill="white" stroke="#0F172A" stroke-width="4"/>
-          <!-- Nose -->
-          <ellipse cx="150" cy="163" rx="14" ry="10" fill="#0F172A"/>
-          <!-- Nostrils -->
-          <circle cx="144" cy="166" r="3" fill="#1e3a5f" opacity="0.5"/>
-          <circle cx="156" cy="166" r="3" fill="#1e3a5f" opacity="0.5"/>
-          <!-- Mouth — happy curve -->
-          <path d="M134 182 Q150 198 166 182" stroke="#0F172A" stroke-width="3.5" stroke-linecap="round"/>
-          <!-- Cheek dots -->
-          <circle cx="118" cy="178" r="5" fill="#F2C94C" opacity="0.5"/>
-          <circle cx="182" cy="178" r="5" fill="#F2C94C" opacity="0.5"/>
-
-          <!-- Eyes — round, expressive, wide-set -->
-          <circle cx="112" cy="144" r="10" fill="#0F172A"/>
-          <circle cx="116" cy="139" r="4" fill="white"/>
-          <circle cx="188" cy="144" r="10" fill="#0F172A"/>
-          <circle cx="192" cy="139" r="4" fill="white"/>
-
-          <!-- Collar -->
-          <rect x="90" y="216" width="120" height="22" rx="11" fill="#F2C94C" stroke="#0F172A" stroke-width="3.5"/>
-          <!-- Medal chain -->
-          <line x1="150" y1="238" x2="150" y2="250" stroke="#0F172A" stroke-width="2.5"/>
-          <!-- Medal -->
-          <circle cx="150" cy="268" r="20" fill="#F2C94C" stroke="#0F172A" stroke-width="3"/>
-          <text x="150" y="275.5" text-anchor="middle" font-size="18" font-weight="900" fill="#0F172A" font-family="Outfit,sans-serif">B</text>
-
-          <!-- Sparkles -->
-          <path d="M244 68 L247 57 L250 68 L261 71 L250 74 L247 85 L244 74 L233 71Z" fill="#F2C94C"/>
-          <path d="M46 92 L48.5 83 L51 92 L60 95 L51 98 L48.5 107 L46 98 L37 95Z" fill="#F2C94C" opacity="0.75"/>
-          <circle cx="256" cy="110" r="5.5" fill="#F2C94C" opacity="0.4"/>
-          <circle cx="36" cy="148" r="4" fill="#F2C94C" opacity="0.3"/>
-        </svg>
+    <div class="hero-visual reveal reveal-delay-2">
+      <img src="images/bell.png" alt="BELLiO AI電話番" class="hero-bell-img">
+      <div class="float-chip chip-red" style="top:12%;left:-8%;">
+        <span class="chip-dot" style="background:#EF4444;"></span>
+        営業電話 — ブロック
+      </div>
+      <div class="float-chip chip-green" style="bottom:22%;right:-10%;">
+        <span class="chip-dot" style="background:#22C55E;"></span>
+        問い合わせ — 転送済み
+      </div>
+      <div class="float-chip chip-blue" style="bottom:8%;left:2%;">
+        <span class="chip-dot" style="background:#3B82F6;"></span>
+        通話内容 — 自動記録
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════ STATS ══════════ -->
-<div id="stats">
-  <div class="stats-inner">
-    <div class="stat-item reveal">
-      <span class="stat-num">24h</span>
-      <span class="stat-label">365日 無休対応</span>
-    </div>
-    <div class="stat-item reveal reveal-delay-1">
-      <span class="stat-num">¥0</span>
-      <span class="stat-label">初期費用・工事費</span>
-    </div>
-    <div class="stat-item reveal">
-      <span class="stat-num">14日</span>
-      <span class="stat-label">無料トライアル</span>
-    </div>
-  </div>
-</div>
-
-<!-- ══════════ PROBLEM ══════════ -->
+<!-- ─── Problem ─── -->
 <section id="problem">
-  <div class="container">
-    <span class="problem-eyebrow">PROBLEM</span>
-    <h2 class="problem-title">会社にかかってくる電話、<br>こんな悩みはありませんか？</h2>
-    <p class="problem-sub">多くの中小企業で、電話対応が業務効率を下げる原因になっています。</p>
+  <div class="problem-inner">
+    <div class="problem-head reveal">
+      <div class="problem-eyebrow">PROBLEM</div>
+      <h2 class="problem-title">こんな電話対応に<br>時間を奪われていませんか？</h2>
+    </div>
     <div class="problem-cards">
       <div class="problem-card reveal">
-        <span class="problem-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 10 19.79 19.79 0 0 1 2 1.34H5a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L6.09 8.03A16 16 0 0 0 15.9 17.83l1.17-1.17a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 18.92Z"/></svg></span>
-        <h3>対応に時間が取られる</h3>
-        <p>会議中・商談中でも電話が鳴り、作業が中断される。折り返しの手間も大きく、1日の集中時間が削られる。</p>
+        <div class="problem-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.08 6.08l1.28-.52a2 2 0 012.11.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <h3>営業電話で作業が止まる</h3>
+        <p>集中して仕事をしているのに営業電話が鳴り続ける。毎回対応するたびに作業が中断される。</p>
       </div>
       <div class="problem-card reveal reveal-delay-1">
-        <span class="problem-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg></span>
-        <h3>営業電話が多すぎる</h3>
-        <p>1日に何件もかかってくる営業・勧誘電話。対応するたびに無駄な時間が発生し、精神的コストも高い。</p>
+        <div class="problem-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>現場作業中に電話が鳴る</h3>
+        <p>外出中・施工中・打合せ中に電話が来ても取れない。折り返しの手間が積み上がっていく。</p>
       </div>
       <div class="problem-card reveal reveal-delay-2">
-        <span class="problem-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg></span>
-        <h3>営業時間外を取りこぼす</h3>
-        <p>夜間・休日にかかってくる予約・問い合わせを取りこぼし、ビジネスチャンスを逃している。</p>
+        <div class="problem-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>社長しか内容がわからない</h3>
+        <p>電話は社長や特定スタッフしか取れない。電話専任スタッフを置く余裕もない。</p>
+      </div>
+      <div class="problem-card reveal reveal-delay-1">
+        <div class="problem-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>不在時の電話を取りこぼす</h3>
+        <p>外出や離席のタイミングで大事な問い合わせを逃してしまう。折り返し連絡が取れないことも。</p>
+      </div>
+      <div class="problem-card reveal reveal-delay-2">
+        <div class="problem-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>営業時間外の問い合わせを逃す</h3>
+        <p>夜間・休日にかかってきた問い合わせは翌営業日対応になり、機会を失う。</p>
+      </div>
+      <div class="problem-card reveal reveal-delay-3">
+        <div class="problem-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3>必要な電話の仕分けが面倒</h3>
+        <p>どの電話が重要か判断しながら対応するのが負担。メモ漏れや対応ミスも起きやすい。</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════ SOLUTION ══════════ -->
-<section id="solution">
-  <div class="container section-center">
-    <span class="eyebrow">✦ SOLUTION</span>
-    <h2 class="section-title">BELLiOの3つの柱</h2>
-    <p class="section-body">AIが電話の「受ける・判断する・処理する」をすべて担います。</p>
-    <div class="solution-grid reveal">
-      <div class="solution-card">
-        <span class="solution-tag">自動化</span>
-        <div class="solution-icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg></div>
-        <h3>FAQ 自動解決</h3>
-        <p>よくある問い合わせはAIが即答。営業時間・場所・料金など定型質問を完全自動化し、担当者の手を離します。</p>
-      </div>
-      <div class="solution-card featured">
-        <span class="solution-tag">コア機能</span>
-        <div class="solution-icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-        <h3>営業電話ブロック</h3>
-        <p>通話内容をリアルタイムで分析。98%の精度で営業・勧誘電話を自動検知してブロック。無駄な対応ゼロへ。</p>
-      </div>
-      <div class="solution-card">
-        <span class="solution-tag">管理</span>
-        <img src="images/image02.png" alt="BELLが管理中" class="solution-illust">
-        <h3>折り返し予約管理</h3>
-        <p>すぐ繋がれない場合は折り返し希望日時をAIが受付・管理。担当者へ通知し確実な対応を実現します。</p>
-      </div>
+<!-- ─── Feature ─── -->
+<section id="feature">
+  <div class="feature-inner container">
+    <div class="feature-copy reveal">
+      <div class="eyebrow">AI PHONE GUARD</div>
+      <h2 class="feature-h2">営業電話は<br>AIが対応します</h2>
+      <p class="feature-body">BELLiO AIは電話内容をリアルタイムで解析し、営業・勧誘・不要な案内を自動判定します。必要な問い合わせだけを担当者へ届けます。</p>
+      <ul class="feature-list">
+        <li>
+          <span class="feature-list-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.08 6.08l1.28-.52a2 2 0 012.11.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </span>
+          営業電話の一次対応・ブロック
+        </li>
+        <li>
+          <span class="feature-list-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </span>
+          問い合わせ内容の自動要約
+        </li>
+        <li>
+          <span class="feature-list-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
+          </span>
+          担当者へのリアルタイム通知
+        </li>
+        <li>
+          <span class="feature-list-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
+          </span>
+          重要な電話は担当者へ転送
+        </li>
+        <li>
+          <span class="feature-list-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </span>
+          営業時間外・夜間も24時間対応
+        </li>
+        <li>
+          <span class="feature-list-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </span>
+          全通話履歴の保存・管理
+        </li>
+      </ul>
+      <a href="#cta" class="btn btn-primary">詳しく相談する →</a>
+    </div>
+    <div class="feature-visual reveal reveal-delay-2">
+      <img src="images/image01.png" alt="BELLiO AIが電話対応中" class="feature-img">
     </div>
   </div>
 </section>
 
-<!-- ══════════ FEATURES ══════════ -->
-<section id="features">
-  <div class="container">
-    <div class="features-header">
-      <div>
-        <span class="eyebrow">✦ FEATURES</span>
-        <h2 class="section-title" style="margin-bottom:0">すべてのシーンに<br>対応する機能群</h2>
-      </div>
-      <p class="section-body" style="margin-bottom:0">業種・規模を問わず、電話対応に関わるあらゆる課題を解決するフル機能セット。</p>
+<!-- ─── Watchdog ─── -->
+<section id="watchdog">
+  <div class="watchdog-inner container">
+    <div class="reveal">
+      <img src="images/image02.png" alt="会社を守るAI番犬 BELL" class="watchdog-img">
     </div>
-    <div class="features-grid">
-      <div class="feat-card reveal">
-        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 10 19.79 19.79 0 0 1 2 1.34H5a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L6.09 8.03A16 16 0 0 0 15.9 17.83l1.17-1.17a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 18.92Z"/></svg></div>
-        <h4>リアルタイム自動応答</h4>
-        <p>着信を即座に受け、AIがリアルタイムで会話。自然な日本語で対応します。</p>
-      </div>
-      <div class="feat-card reveal reveal-delay-1">
-        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-        <h4>予約受付 & カレンダー連携</h4>
-        <p>電話での予約を自動受付・確定。Googleカレンダー等と連携でダブルブッキングなし。</p>
-      </div>
-      <div class="feat-card reveal reveal-delay-2">
-        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
-        <h4>緊急アラート通知</h4>
-        <p>緊急性の高い用件を検知した場合、Slack / LINEへ即時プッシュ通知。</p>
-      </div>
-      <div class="feat-card reveal">
-        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="3" y1="20" x2="21" y2="20"/></svg></div>
-        <h4>通話履歴 & 分析</h4>
-        <p>全通話を自動記録・要約。問い合わせ傾向や対応品質をダッシュボードで把握。</p>
-      </div>
-      <div class="feat-card reveal reveal-delay-1">
-        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/></svg></div>
-        <h4>AIカスタマイズ</h4>
-        <p>FAQ・対応ルール・トーンをノーコードで設定。業種に合わせた対応を実現。</p>
-      </div>
-      <div class="feat-card reveal reveal-delay-2">
-        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
-        <h4>既存システム連携</h4>
-        <p>CRM・予約システム・チャットツールと連携。既存ワークフローに組み込めます。</p>
-      </div>
+    <div class="watchdog-copy reveal reveal-delay-1">
+      <div class="eyebrow">AI WATCHDOG</div>
+      <h2 class="watchdog-h2">会社を守る<br>AI番犬</h2>
+      <p class="watchdog-body">BELLiOはただ電話を受けるだけではありません。不要な営業電話を受け止め、本当に必要な問い合わせだけを届ける。会社の電話番として働くAIです。</p>
+      <ul class="watchdog-points">
+        <li>不要な電話を自動でブロック・一次対応</li>
+        <li>重要な電話だけを担当者へ届ける</li>
+        <li>24時間365日、休みなく番犬として稼働</li>
+        <li>社長・スタッフが本来の仕事に集中できる</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- ══════════ DEMO ══════════ -->
-<section id="demo">
-  <div class="container">
-    <div class="demo-layout">
-      <div class="demo-copy reveal">
-        <span class="eyebrow" style="background:rgba(242,201,76,.15)">✦ DASHBOARD</span>
-        <h2 class="demo-title">すべての対応を、<br>一画面で把握</h2>
-        <p class="demo-body">
-          リアルタイムの通話状況から過去の履歴・分析まで。
-          BELLiOの管理ダッシュボードで、会社の電話対応を完全に可視化します。
-        </p>
-        <ul class="demo-points">
-          <li>今日の対応件数・ブロック件数をリアルタイムで確認</li>
-          <li>通話内容のAI要約と感情分析を自動生成</li>
-          <li>週次レポートをメールで自動送信</li>
-          <li>複数拠点・複数番号を一元管理</li>
+<!-- ─── Before / After ─── -->
+<section id="before-after">
+  <div class="before-after-inner container">
+    <div class="before-after-head reveal">
+      <div class="eyebrow">BEFORE / AFTER</div>
+      <h2 class="section-title">導入前後の変化</h2>
+    </div>
+    <div class="before-after-grid reveal">
+      <div class="ba-col ba-before">
+        <div class="ba-label">導入前</div>
+        <ul class="ba-items">
+          <li>
+            <span class="ba-icon-x">✕</span>
+            営業電話に毎回対応させられる
+          </li>
+          <li>
+            <span class="ba-icon-x">✕</span>
+            電話のたびに作業が中断される
+          </li>
+          <li>
+            <span class="ba-icon-x">✕</span>
+            不在時の問い合わせを逃す
+          </li>
+          <li>
+            <span class="ba-icon-x">✕</span>
+            メモ漏れ・折り返し対応が増える
+          </li>
+          <li>
+            <span class="ba-icon-x">✕</span>
+            営業時間外は完全に取りこぼし
+          </li>
         </ul>
       </div>
-      <div class="dashboard-card reveal reveal-delay-1">
-        <div class="dash-topbar">
-          <div class="dash-dot" style="background:#EF4444"></div>
-          <div class="dash-dot" style="background:#F59E0B"></div>
-          <div class="dash-dot" style="background:#10B981"></div>
-          <span class="dash-title">BELLiO Dashboard — 本社</span>
+      <div class="ba-col ba-after">
+        <div class="ba-label">BELLiO 導入後</div>
+        <ul class="ba-items">
+          <li>
+            <span class="ba-icon-check">
+              <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            営業電話はAIが自動で一次対応
+          </li>
+          <li>
+            <span class="ba-icon-check">
+              <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            必要な電話だけ通知・転送
+          </li>
+          <li>
+            <span class="ba-icon-check">
+              <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            通話内容をAIが自動記録・要約
+          </li>
+          <li>
+            <span class="ba-icon-check">
+              <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            不在時も24時間受付・記録
+          </li>
+          <li>
+            <span class="ba-icon-check">
+              <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            本来の業務に集中できる
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Demo ─── -->
+<section id="demo">
+  <div class="demo-inner container">
+    <div class="demo-copy reveal">
+      <div class="eyebrow">LIVE DEMO</div>
+      <h2 class="demo-h2">実際の通話を<br>聞いてみてください</h2>
+      <p class="demo-body">営業電話がかかってきた瞬間、BELLiO AIが一次対応します。担当者は対応しなくて済みます。</p>
+      <div class="demo-note">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/></svg>
+        営業電話はAIが一次対応します
+      </div>
+    </div>
+    <div class="reveal reveal-delay-2">
+      <div class="call-log">
+        <div class="call-log-bar">
+          <div class="call-log-dot" style="background:#FF5F57;"></div>
+          <div class="call-log-dot" style="background:#FFBD2E;"></div>
+          <div class="call-log-dot" style="background:#28C840;"></div>
+          <span class="call-log-title">BELLiO — 通話ログ</span>
         </div>
-        <div class="dash-body">
-          <div class="dash-stats">
-            <div class="dash-stat">
-              <span class="n" style="color:#F2C94C">18</span>
-              <span class="l">今日の対応</span>
+        <div class="call-log-body">
+          <div class="call-incoming">
+            <div class="call-incoming-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.08 6.08l1.28-.52a2 2 0 012.11.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             </div>
-            <div class="dash-stat">
-              <span class="n" style="color:#F87171">7</span>
-              <span class="l">営業ブロック</span>
-            </div>
-            <div class="dash-stat">
-              <span class="n" style="color:#34D399">4</span>
-              <span class="l">予約受付</span>
+            <div class="call-incoming-info">
+              <div class="lbl">着信中</div>
+              <div class="num">050-XXXX-1234</div>
             </div>
           </div>
-          <div class="dash-list">
-            <div class="dash-row">
-              <div class="ico" style="background:rgba(16,185,129,.15)">✅</div>
-              <div class="info">
-                <div class="t">予約受付完了 — 田中様 14:00</div>
-                <div class="s">090-XXXX-XXXX · 11:24 · 2分18秒</div>
-              </div>
-              <span class="badge badge-green">完了</span>
-            </div>
-            <div class="dash-row">
-              <div class="ico" style="background:rgba(239,68,68,.15)">🚫</div>
-              <div class="info">
-                <div class="t">営業電話を自動ブロック</div>
-                <div class="s">03-XXXX-XXXX · 10:58 · 22秒</div>
-              </div>
-              <span class="badge badge-red">ブロック</span>
-            </div>
-            <div class="dash-row">
-              <div class="ico" style="background:rgba(242,201,76,.15)">💬</div>
-              <div class="info">
-                <div class="t">FAQ自動解決 — 営業時間の問い合わせ</div>
-                <div class="s">080-XXXX-XXXX · 10:31 · 58秒</div>
-              </div>
-              <span class="badge badge-yellow">自動解決</span>
-            </div>
-            <div class="dash-row">
-              <div class="ico" style="background:rgba(59,130,246,.15)">🔔</div>
-              <div class="info">
-                <div class="t">緊急アラート送信済み</div>
-                <div class="s">070-XXXX-XXXX · 09:47 · 1分02秒</div>
-              </div>
-              <span class="badge" style="background:rgba(59,130,246,.15);color:#60A5FA">アラート</span>
-            </div>
+          <div class="conv-row left">
+            <div class="conv-avatar ai">AI</div>
+            <div class="conv-bubble">お電話ありがとうございます。BELLiOです。ご用件をお聞かせください。</div>
+          </div>
+          <div class="conv-row right">
+            <div class="conv-avatar caller">発</div>
+            <div class="conv-bubble">株式会社〇〇と申します。新しいサービスのご提案でお電話しました。</div>
+          </div>
+          <div class="conv-row left">
+            <div class="conv-avatar ai">AI</div>
+            <div class="conv-bubble">ありがとうございます。営業・勧誘に関するご連絡はお電話でのご対応を控えております。必要な場合は、Webサイトのお問い合わせフォームよりご連絡ください。</div>
+          </div>
+          <div class="conv-row right">
+            <div class="conv-avatar caller">発</div>
+            <div class="conv-bubble">わかりました。失礼します。</div>
+          </div>
+          <div class="call-result">
+            <span class="dot"></span>
+            <span>営業電話をブロックしました — 通話内容を保存</span>
           </div>
         </div>
       </div>
@@ -1773,194 +1591,360 @@ footer {
   </div>
 </section>
 
-<!-- ══════════ STEPS ══════════ -->
+<!-- ─── Industry ─── -->
+<section id="industry">
+  <div class="industry-inner">
+    <div class="industry-head reveal">
+      <div class="eyebrow">USE CASES</div>
+      <h2 class="section-title">業界別の活用シーン</h2>
+      <p class="section-body">少人数で電話対応に追われている会社に特に効果があります。</p>
+    </div>
+    <div class="industry-grid">
+      <div class="industry-card reveal">
+        <div class="industry-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>士業</h3>
+        <p class="industry-sub">税理士 · 社労士 · 行政書士 · 司法書士</p>
+        <ul class="industry-items">
+          <li>新規相談の一次受付・内容確認</li>
+          <li>顧問先からの問い合わせ対応</li>
+          <li>営業・勧誘電話のブロック</li>
+        </ul>
+      </div>
+      <div class="industry-card reveal reveal-delay-1">
+        <div class="industry-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        </div>
+        <h3>不動産会社</h3>
+        <p class="industry-sub">仲介・管理・売買</p>
+        <ul class="industry-items">
+          <li>空室・物件問い合わせの受付</li>
+          <li>内見スケジュール確認の一次対応</li>
+          <li>営業電話・査定業者のブロック</li>
+        </ul>
+      </div>
+      <div class="industry-card reveal reveal-delay-2">
+        <div class="industry-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="2 20 22 20 12 4 2 20"/><line x1="12" y1="14" x2="12" y2="10"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        </div>
+        <h3>工務店・建設会社</h3>
+        <p class="industry-sub">施工・リフォーム・建築</p>
+        <ul class="industry-items">
+          <li>見積相談・資料請求の受付</li>
+          <li>現場不在時の電話対応</li>
+          <li>担当者への取り次ぎ・折り返し管理</li>
+        </ul>
+      </div>
+      <div class="industry-card reveal reveal-delay-3">
+        <div class="industry-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>中小企業・スタートアップ</h3>
+        <p class="industry-sub">従業員10名以下の会社</p>
+        <ul class="industry-items">
+          <li>代表電話の一次受付・振り分け</li>
+          <li>不要電話の削減と業務集中</li>
+          <li>電話専任スタッフ不要の体制構築</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ROI ─── -->
+<section id="roi">
+  <div class="roi-inner container">
+    <div class="roi-copy reveal">
+      <div class="eyebrow">ROI</div>
+      <h2 class="roi-h2">電話対応に奪われる時間を<br>減らしませんか</h2>
+      <p class="roi-body">1日10件の電話対応に1件あたり3分かかるとすると、月20営業日で600分——10時間以上が電話に消えています。営業電話や定型問い合わせをAIが一次対応することで、スタッフは本来の仕事に集中できます。</p>
+    </div>
+    <div class="roi-card reveal reveal-delay-1">
+      <div class="roi-calc">
+        <div class="roi-row">
+          <span>1日の電話件数（参考例）</span>
+          <span>10件</span>
+        </div>
+        <div class="roi-row">
+          <span>1件あたりの対応時間</span>
+          <span>3分</span>
+        </div>
+        <div class="roi-row">
+          <span>月の営業日数</span>
+          <span>20日</span>
+        </div>
+      </div>
+      <div class="roi-total">
+        <span class="roi-num">10h+</span>
+        <span class="roi-num-label">月の電話対応時間（参考試算）</span>
+      </div>
+      <p class="roi-footnote">※ 上記は参考例です。実際の効果は企業により異なります。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Trust ─── -->
+<section id="trust">
+  <div class="trust-inner">
+    <div class="trust-head reveal">
+      <div class="eyebrow">RELIABILITY</div>
+      <h2 class="section-title">AI任せにしすぎない<br>安心設計</h2>
+      <p class="section-body">重要な電話を取りこぼさないよう、人とAIが協調して動く仕組みになっています。</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card reveal">
+        <div class="trust-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/></svg>
+        </div>
+        <div class="trust-text">
+          <h4>重要な電話は人へ転送</h4>
+          <p>必要と判断した電話は、担当者へ素早くつなぎます。</p>
+        </div>
+      </div>
+      <div class="trust-card reveal reveal-delay-1">
+        <div class="trust-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+        </div>
+        <div class="trust-text">
+          <h4>通話履歴を全件保存</h4>
+          <p>すべての通話内容を記録。いつでも確認できます。</p>
+        </div>
+      </div>
+      <div class="trust-card reveal reveal-delay-2">
+        <div class="trust-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
+        </div>
+        <div class="trust-text">
+          <h4>通話内容を自動要約</h4>
+          <p>AIが通話内容を要約し、管理画面でいつでも確認できます。</p>
+        </div>
+      </div>
+      <div class="trust-card reveal reveal-delay-1">
+        <div class="trust-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07M4.93 19.07a10 10 0 010-14.14M8.46 15.54a5 5 0 010-7.07"/></svg>
+        </div>
+        <div class="trust-text">
+          <h4>判定ルールをカスタマイズ</h4>
+          <p>営業電話の判定基準は会社ごとに調整できます。</p>
+        </div>
+      </div>
+      <div class="trust-card reveal reveal-delay-2">
+        <div class="trust-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="trust-text">
+          <h4>営業時間外も24h対応</h4>
+          <p>夜間・休日の問い合わせも受付・記録します。</p>
+        </div>
+      </div>
+      <div class="trust-card reveal reveal-delay-3">
+        <div class="trust-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/></svg>
+        </div>
+        <div class="trust-text">
+          <h4>丁寧な導入サポート</h4>
+          <p>設定から運用開始まで、専任スタッフが伴走します。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Steps ─── -->
 <section id="steps">
-  <div class="container">
-    <div class="steps-layout">
-      <div>
-        <span class="eyebrow">✦ HOW IT WORKS</span>
-        <h2 class="section-title">最短3分で<br>導入完了</h2>
-        <p class="section-body" style="margin-bottom:40px">工事不要・専門知識不要。既存の電話番号はそのまま使えます。</p>
-        <div class="steps-list">
-          <div class="step reveal">
-            <div class="step-num">1</div>
-            <div class="step-content">
-              <h3>アカウント登録</h3>
-              <p>メールアドレスだけで登録完了。クレジットカード不要で14日間の無料トライアルが即時開始。</p>
-            </div>
-          </div>
-          <div class="step reveal">
-            <div class="step-num">2</div>
-            <div class="step-content">
-              <h3>FAQと設定を入力</h3>
-              <p>会社情報・よくある質問・対応ルールをフォームに入力。AIが自動で学習し即日対応開始。</p>
-            </div>
-          </div>
-          <div class="step reveal">
-            <div class="step-num">3</div>
-            <div class="step-content">
-              <h3>電話番号を転送設定</h3>
-              <p>既存の固定電話や携帯からBELLiOへ転送設定するだけ。キャリア問わず対応、工事不要。</p>
-            </div>
-          </div>
-          <div class="step reveal">
-            <div class="step-num">4</div>
-            <div class="step-content">
-              <h3>BELLが自動対応を開始</h3>
-              <p>設定完了後すぐに対応スタート。管理画面でリアルタイムに確認しながら運用できます。</p>
-            </div>
-          </div>
-        </div>
-        <div class="steps-note reveal">
-          <span>🔒</span>
-          <span>セキュリティ：全通話データは暗号化。個人情報保護法準拠。</span>
+  <div class="steps-inner">
+    <div class="steps-head reveal">
+      <div class="eyebrow">HOW IT WORKS</div>
+      <h2 class="section-title">最短1日で導入できます</h2>
+    </div>
+    <div class="steps-list">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>電話番号を転送設定する</h3>
+          <p>既存の電話番号をBELLiOへ転送するだけ。特別な機器は不要です。</p>
+          <span class="step-tag">所要 5分</span>
         </div>
       </div>
-      <div class="steps-visual reveal reveal-delay-2">
-        <img src="images/image01.png" alt="BELLが電話対応中" class="steps-illust">
-        <p class="steps-caption">BELLが24時間、あなたの代わりに電話を取ります</p>
+      <div class="step reveal reveal-delay-1">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>会社情報・対応ルールを設定する</h3>
+          <p>会社の基本情報、よくある質問、ブロックしたい電話のルールをフォームに入力します。AIが自動で学習します。</p>
+          <span class="step-tag">所要 最短1日</span>
+        </div>
+      </div>
+      <div class="step reveal reveal-delay-2">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>BELLiOが24時間稼働開始</h3>
+          <p>設定完了後すぐに稼働を開始。管理画面で通話状況をリアルタイムで確認できます。</p>
+          <span class="step-tag">即日稼働</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════ PRICING ══════════ -->
+<!-- ─── Pricing ─── -->
 <section id="pricing">
-  <div class="container section-center">
-    <span class="eyebrow">✦ PRICING</span>
-    <h2 class="section-title">シンプルな料金プラン</h2>
-    <p class="section-body">すべてのプランに14日間の無料トライアル。初期費用・解約手数料ゼロ。</p>
+  <div class="container">
+    <div class="pricing-head reveal">
+      <div class="eyebrow">PRICING</div>
+      <h2 class="section-title">シンプルな料金体系</h2>
+    </div>
+    <div style="text-align:center" class="reveal">
+      <div class="pricing-campaign">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        先行導入キャンペーン実施中
+      </div>
+    </div>
     <div class="pricing-grid">
-      <!-- Starter -->
       <div class="pricing-card reveal">
-        <div class="plan-tier">STARTER</div>
+        <div class="plan-tier">Starter</div>
         <div class="plan-price-row">
           <span class="plan-yen">¥</span>
-          <span class="plan-amount">4,980</span>
+          <span class="plan-amount">9,800</span>
           <span class="plan-per">/月</span>
         </div>
-        <p class="plan-desc">個人事業主・小規模事業者向け。まず試してみたい方に。</p>
+        <p class="plan-desc">月50通話まで。はじめての導入や小規模チームに。</p>
         <ul class="plan-features">
-          <li>月50通話まで</li>
-          <li>FAQ自動回答</li>
-          <li>営業電話ブロック</li>
-          <li>メール通知</li>
-          <li>通話履歴・分析</li>
+          <li><span class="plan-check"></span>AI電話番・一次対応</li>
+          <li><span class="plan-check"></span>営業電話ブロック</li>
+          <li><span class="plan-check"></span>通話内容の自動記録</li>
+          <li><span class="plan-check"></span>管理画面アクセス</li>
+          <li><span class="plan-check"></span>メール通知</li>
         </ul>
-        <a href="#cta" class="btn btn-outline" style="width:100%;justify-content:center">無料で試す</a>
+        <a href="#cta" class="btn btn-outline" style="width:100%;justify-content:center;">相談してみる</a>
       </div>
-      <!-- Business -->
+
       <div class="pricing-card pricing-featured reveal reveal-delay-1">
-        <div class="pricing-badge">人気 No.1</div>
-        <div class="plan-tier">BUSINESS</div>
+        <div class="pricing-badge">人気プラン</div>
+        <div class="plan-tier">Business</div>
         <div class="plan-price-row">
-          <span class="plan-yen" style="color:white">¥</span>
-          <span class="plan-amount">19,800</span>
+          <span class="plan-yen">¥</span>
+          <span class="plan-amount">29,800</span>
           <span class="plan-per">/月</span>
         </div>
-        <p class="plan-desc">中小企業・チームに最適。ほとんどの機能が使えます。</p>
+        <p class="plan-desc">月200通話まで。本格導入・複数スタッフへの通知に。</p>
         <ul class="plan-features">
-          <li>月200通話まで</li>
-          <li>FAQ自動回答（無制限）</li>
-          <li>予約受付・折り返し管理</li>
-          <li>緊急アラート</li>
-          <li>Slack / LINE通知連携</li>
-          <li>優先サポート</li>
+          <li><span class="plan-check"></span>Starterの全機能</li>
+          <li><span class="plan-check"></span>担当者への電話転送</li>
+          <li><span class="plan-check"></span>通話内容の自動要約</li>
+          <li><span class="plan-check"></span>複数スタッフへ通知</li>
+          <li><span class="plan-check"></span>判定ルールのカスタマイズ</li>
+          <li><span class="plan-check"></span>専任サポート</li>
         </ul>
-        <a href="#cta" class="btn btn-yellow" style="width:100%;justify-content:center">無料で試す</a>
+        <a href="#cta" class="btn btn-yellow" style="width:100%;justify-content:center;">相談してみる</a>
       </div>
-      <!-- Enterprise -->
+
       <div class="pricing-card reveal reveal-delay-2">
-        <div class="plan-tier">ENTERPRISE</div>
+        <div class="plan-tier">Pro</div>
         <div class="plan-price-row">
-          <span class="plan-amount" style="font-size:28px">お問い合わせ</span>
+          <span class="plan-amount contact">要相談</span>
         </div>
-        <p class="plan-desc">大規模・複数拠点が必要な企業向けのカスタムプラン。</p>
+        <p class="plan-desc">大量通話・複数拠点・カスタム要件に対応します。</p>
         <ul class="plan-features">
-          <li>通話数無制限</li>
-          <li>マルチテナント対応</li>
-          <li>API連携・カスタム統合</li>
-          <li>SLA保証</li>
-          <li>専任サポート担当</li>
-          <li>オンボーディング支援</li>
+          <li><span class="plan-check"></span>Businessの全機能</li>
+          <li><span class="plan-check"></span>通話数カスタマイズ</li>
+          <li><span class="plan-check"></span>複数拠点・番号対応</li>
+          <li><span class="plan-check"></span>API連携</li>
+          <li><span class="plan-check"></span>SLA保証</li>
         </ul>
-        <a href="#cta" class="btn btn-outline" style="width:100%;justify-content:center">相談する</a>
+        <a href="#cta" class="btn btn-outline" style="width:100%;justify-content:center;">お問い合わせ</a>
       </div>
     </div>
-    <p class="pricing-note">すべてのプランに14日間無料トライアルつき。いつでも解約可。</p>
+    <p class="pricing-note reveal">初期費用なし · 月額費用のみ · いつでも解約可能</p>
   </div>
 </section>
 
-<!-- ══════════ FAQ ══════════ -->
+<!-- ─── FAQ ─── -->
 <section id="faq">
   <div class="container section-center">
-    <span class="eyebrow">✦ FAQ</span>
-    <h2 class="section-title">よくある質問</h2>
-    <div class="faq-wrap" style="margin-top:48px;text-align:left">
-      <div class="faq-item">
-        <button class="faq-q">既存の電話番号はそのまま使えますか？<span class="faq-chevron">↓</span></button>
-        <div class="faq-a">はい、既存の電話番号はそのままお使いいただけます。固定電話・携帯電話どちらでも、着信転送設定をするだけで導入完了です。番号を変える必要は一切ありません。</div>
+    <div class="reveal">
+      <div class="eyebrow">FAQ</div>
+      <h2 class="section-title">よくある質問</h2>
+    </div>
+    <div class="faq-wrap" style="text-align:left;">
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">
+          AIが大事な電話を切ってしまうことはありませんか？
+          <div class="faq-chevron">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </button>
+        <div class="faq-a">重要な問い合わせと判断した電話は、担当者へ転送または折り返し希望を受け付けます。AIの判定に不安な場合は、ルールを細かく設定することで安心して運用できます。また、全通話を記録しているため、後から確認することも可能です。</div>
       </div>
-      <div class="faq-item">
-        <button class="faq-q">AIが答えられない質問はどうなりますか？<span class="faq-chevron">↓</span></button>
-        <div class="faq-a">AIが回答できないと判断した場合、折り返し連絡の意向を確認した上で、担当者へSlack / LINE / メール等でアラートを送信します。緊急度が高い用件は即時アラートでお知らせします。</div>
+      <div class="faq-item reveal reveal-delay-1">
+        <button class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">
+          営業時間外・夜間・休日も対応できますか？
+          <div class="faq-chevron">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </button>
+        <div class="faq-a">はい、24時間365日対応しています。夜間や休日にかかってきた問い合わせも受付・記録し、翌営業日に担当者が確認できるよう通知します。</div>
       </div>
-      <div class="faq-item">
-        <button class="faq-q">セキュリティ・個人情報は大丈夫ですか？<span class="faq-chevron">↓</span></button>
-        <div class="faq-a">通話データはすべて暗号化して保存しています。アクセス権限は厳格に管理され、第三者への情報提供は一切行いません。日本の個人情報保護法に準拠した運用を行っています。</div>
+      <div class="faq-item reveal reveal-delay-2">
+        <button class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">
+          既存の電話番号はそのまま使えますか？
+          <div class="faq-chevron">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </button>
+        <div class="faq-a">はい、現在お使いの電話番号をBELLiOへ転送する設定をするだけです。番号変更は不要で、名刺や広告の差し替えも必要ありません。</div>
       </div>
-      <div class="faq-item">
-        <button class="faq-q">無料トライアル後はどうなりますか？<span class="faq-chevron">↓</span></button>
-        <div class="faq-a">トライアル終了後に自動課金はされません。プランを選択して継続するか、そのまま終了するかをご選択いただけます。データは30日間保持されます。</div>
+      <div class="faq-item reveal reveal-delay-1">
+        <button class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">
+          従業員が少ない小規模企業でも導入できますか？
+          <div class="faq-chevron">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </button>
+        <div class="faq-a">はい、むしろ小規模企業こそBELLiOが力を発揮します。電話専任スタッフを置かなくても、AIが24時間一次対応するため、少人数でも安心して運用できます。</div>
       </div>
-      <div class="faq-item">
-        <button class="faq-q">業種・業界を問わず使えますか？<span class="faq-chevron">↓</span></button>
-        <div class="faq-a">はい。不動産、医療・クリニック、飲食、士業、IT企業、製造業など、電話対応が発生するあらゆる業種でご利用いただけます。FAQの設定は自由にカスタマイズ可能です。</div>
+      <div class="faq-item reveal reveal-delay-2">
+        <button class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">
+          導入までどれくらいかかりますか？
+          <div class="faq-chevron">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </button>
+        <div class="faq-a">転送設定と基本情報の入力だけで、最短1日で稼働開始できます。専任スタッフが導入をサポートするので、ITに詳しくなくても安心です。</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════ CTA ══════════ -->
+<!-- ─── CTA ─── -->
 <section id="cta">
-  <div class="container" style="position:relative;z-index:1;">
-    <div class="cta-bell">
-      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(242,201,76,.15);border:1px solid rgba(242,201,76,.35);padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600;color:var(--yellow);letter-spacing:.5px;">
-        <span style="width:7px;height:7px;background:var(--yellow);border-radius:50%;display:inline-block;animation:pulse 2s infinite;"></span>
-        AI Employee Platform
+  <div class="cta-inner container">
+    <div class="reveal">
+      <h2 class="cta-title">電話対応に振り回されない<br>会社へ。</h2>
+      <p class="cta-body">BELLiO AIが、営業電話から会社を守ります。<br>まずは無料でご相談ください。</p>
+      <div class="cta-actions">
+        <a href="mailto:info@bellioai.com" class="btn-cta-main">無料相談する →</a>
+        <a href="#demo" class="btn-cta-sub">デモを聞く</a>
       </div>
+      <p class="cta-footnote">初期費用なし · クレジットカード不要 · 最短1日で導入</p>
     </div>
-    <h2 class="cta-title">
-      BELLiOで、会社の電話対応を<br>
-      AIに任せませんか？
-    </h2>
-    <p class="cta-body">14日間無料トライアル · クレジットカード不要 · 最短3分で導入</p>
-    <div class="cta-actions">
-      <a href="mailto:info@bellio.ai?subject=BELLiO 無料トライアル申込" class="btn-cta-main">
-        無料トライアルを始める →
-      </a>
-      <a href="mailto:info@bellio.ai?subject=BELLiO デモ依頼" class="btn-cta-sub">
-        デモを見る
-      </a>
-    </div>
-    <p class="cta-footnote">お問い合わせ：info@bellio.ai</p>
   </div>
 </section>
 
-<!-- ══════════ FOOTER ══════════ -->
+<!-- ─── Footer ─── -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <a href="/" class="logo" style="margin-bottom:12px;display:inline-block">
-          <img src="images/logo.png" alt="BELLiO" style="height:36px;width:auto;display:block;filter:brightness(0) invert(1);">
+        <a href="/" class="logo" style="margin-bottom:14px;display:inline-block;">
+          <img src="images/logo.png" alt="BELLiO" style="height:32px;width:auto;display:block;filter:brightness(0) invert(1);">
         </a>
-        <p class="footer-desc">AIが、会社の最初の対応を担います。<br>24時間365日、あなたのビジネスを守るAI従業員。</p>
+        <p class="footer-desc">会社の電話番をするAI。営業電話から会社を守り、必要な問い合わせだけを届けます。</p>
       </div>
       <nav class="footer-nav">
         <div class="footer-col">
           <h5>Product</h5>
-          <a href="#solution">機能</a>
+          <a href="#feature">機能</a>
           <a href="#pricing">料金</a>
           <a href="#steps">使い方</a>
           <a href="#demo">デモ</a>
@@ -1968,8 +1952,7 @@ footer {
         <div class="footer-col">
           <h5>Company</h5>
           <a href="https://8zero.co.jp" target="_blank" rel="noopener">会社情報</a>
-          <a href="/blog/">ブログ</a>
-          <a href="mailto:info@bellio.ai">お問い合わせ</a>
+          <a href="mailto:info@bellioai.com">お問い合わせ</a>
         </div>
         <div class="footer-col">
           <h5>Legal</h5>
@@ -1981,43 +1964,23 @@ footer {
     </div>
     <div class="footer-bottom">
       <span>© 2026 BELLiO. All rights reserved.</span>
-      <span>Powered by AI · Made in Japan</span>
+      <span>AI Phone Guard · Made in Japan</span>
     </div>
   </div>
 </footer>
 
 <script>
-// FAQ accordion
-document.querySelectorAll('.faq-q').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const item = btn.closest('.faq-item');
-    const wasOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-    if (!wasOpen) item.classList.add('open');
-  });
-});
-
-// Scroll reveal
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
-  });
-}, { threshold: 0.08 });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-// Header scroll class
+// Header scroll
 const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 20);
 }, { passive: true });
 
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const t = document.querySelector(a.getAttribute('href'));
-    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-  });
-});
+// Reveal on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
