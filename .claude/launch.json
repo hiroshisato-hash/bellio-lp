@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "bellio-lp",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8899"],
+      "port": 8899,
+      "cwd": "/Users/hiroshi.sato/callmint/bellio-lp"
+    }
+  ]
+}
