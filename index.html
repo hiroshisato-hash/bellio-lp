@@ -497,7 +497,7 @@ nav a:hover, nav a.active { color: #fff; background: rgba(255,255,255,.08); }
 .pricing-h2 { font-size: clamp(30px, 4vw, 50px); font-weight: 700; letter-spacing: -0.03em; color: #fff; margin-bottom: 14px; }
 .pricing-sub { font-size: 14.5px; color: rgba(255,255,255,.35); font-family: 'Noto Sans JP', sans-serif; }
 .pricing-head { text-align: center; margin-bottom: 60px; }
-.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; max-width: 960px; margin: 0 auto; position: relative; z-index: 1; }
+.pricing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; max-width: 680px; margin: 0 auto; position: relative; z-index: 1; }
 .pc {
   border-radius: 22px; padding: 34px 30px;
   border: 1px solid rgba(255,255,255,.1);
@@ -625,7 +625,7 @@ footer {
   .bc-wide { grid-column: span 1; }
   .problem-grid { grid-template-columns: 1fr; gap: 10px; }
   .industry-grid { grid-template-columns: repeat(2, 1fr); }
-  .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
+  .pricing-grid { grid-template-columns: 1fr; max-width: 400px; }
   .steps-grid { grid-template-columns: 1fr; gap: 36px; }
   .steps-grid::before { display: none; }
   .ft-top { grid-template-columns: 1fr 1fr; }
@@ -685,20 +685,32 @@ footer {
       <div class="dog-ring dog-ring-2" aria-hidden="true"></div>
       <div class="dog-ring dog-ring-3" aria-hidden="true"></div>
       <div class="hero-dog-svg">
-        <svg viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="65" cy="65" r="61" fill="white" stroke="#0F172A" stroke-width="4"/>
-          <ellipse cx="33" cy="70" rx="19" ry="34" fill="#0F172A" transform="rotate(-8 33 70)"/>
-          <ellipse cx="64" cy="52" rx="28" ry="22" fill="white" stroke="#0F172A" stroke-width="2.5"/>
-          <path d="M34 38 Q48 28 70 33 Q72 47 62 53 Q48 53 38 46 Z" fill="#0F172A"/>
-          <ellipse cx="87" cy="58" rx="9" ry="7" fill="white" stroke="#0F172A" stroke-width="2"/>
-          <ellipse cx="95" cy="57" rx="4" ry="3" fill="#0F172A"/>
-          <circle cx="68" cy="48" r="4" fill="#0F172A"/>
-          <circle cx="69.5" cy="46.5" r="1.6" fill="white"/>
-          <ellipse cx="52" cy="97" rx="22" ry="14" fill="white" stroke="#0F172A" stroke-width="2.5"/>
-          <rect x="33" y="72" width="48" height="9" rx="4.5" fill="#F2C94C" stroke="#0F172A" stroke-width="1.8"/>
-          <line x1="56" y1="81" x2="56" y2="87" stroke="#0F172A" stroke-width="1.5"/>
-          <circle cx="56" cy="98" r="11" fill="#F2C94C" stroke="#0F172A" stroke-width="1.8"/>
-          <text x="56" y="102.5" text-anchor="middle" font-size="13" font-weight="900" fill="#0F172A" font-family="Outfit,sans-serif">B</text>
+        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- white background -->
+          <circle cx="100" cy="100" r="98" fill="white"/>
+          <!-- double ring border -->
+          <circle cx="100" cy="100" r="94" stroke="#0F172A" stroke-width="2.5"/>
+          <circle cx="100" cy="100" r="86" stroke="#0F172A" stroke-width="1.5"/>
+          <!-- neck / lower body (dark) -->
+          <path d="M 78 182 L 78 148 C 78 130 84 118 92 112 C 97 107 103 105 109 106 C 119 108 128 118 133 136 C 137 152 137 172 137 182 Z" fill="#0F172A"/>
+          <!-- ear (dark floppy) -->
+          <ellipse cx="76" cy="90" rx="14" ry="23" fill="#0F172A" transform="rotate(-8 76 90)"/>
+          <!-- head (white) -->
+          <path d="M 80 94 C 80 71 93 56 113 54 C 133 52 154 67 154 86 C 154 105 141 118 122 121 C 103 124 80 114 80 94 Z" fill="white" stroke="#0F172A" stroke-width="2.2"/>
+          <!-- snout -->
+          <path d="M 130 89 C 141 82 156 83 160 91 C 162 97 158 107 145 110 C 132 113 120 105 120 97 C 120 92 124 90 130 89 Z" fill="white" stroke="#0F172A" stroke-width="1.8"/>
+          <!-- nose -->
+          <ellipse cx="159" cy="89" rx="5.5" ry="3.8" fill="#0F172A"/>
+          <!-- eye -->
+          <circle cx="116" cy="76" r="4.5" fill="#0F172A"/>
+          <circle cx="117.5" cy="74.5" r="1.8" fill="white"/>
+          <!-- collar (dark curved band) -->
+          <path d="M 86 120 C 90 127 98 131 110 131 C 123 131 131 127 136 120" stroke="#0F172A" stroke-width="10" stroke-linecap="round" fill="none"/>
+          <!-- medal connector -->
+          <line x1="110" y1="136" x2="110" y2="148" stroke="#0F172A" stroke-width="2.5"/>
+          <!-- medal -->
+          <circle cx="110" cy="161" r="14" fill="#F2C94C"/>
+          <circle cx="110" cy="161" r="14" fill="none" stroke="#0F172A" stroke-width="1.8"/>
         </svg>
       </div>
     </div>
@@ -774,7 +786,6 @@ footer {
     <div class="bento">
       <!-- Card A: Block (dark, 2col) -->
       <div class="bc bc-dark bc-wide reveal">
-        <div class="bc-icon bc-icon-d">🛡️</div>
         <h3 class="bc-title">営業電話、もう受けなくていい</h3>
         <p class="bc-desc">AIがリアルタイムで通話内容を解析し、営業・勧誘・アンケートを自動判定。重要な問い合わせだけをあなたに届けます。</p>
         <div class="flow" aria-label="電話フロー図">
@@ -801,14 +812,12 @@ footer {
       </div>
       <!-- Card B: 24h (yellow, 1col) -->
       <div class="bc bc-yellow reveal" style="transition-delay:.1s">
-        <div class="bc-icon bc-icon-y">⚡</div>
         <h3 class="bc-title">休まず稼働</h3>
         <p class="bc-desc">夜間・休日・年末年始も関係なし。365日常時稼働します。</p>
         <div class="bc-stat" style="color:var(--deep)">24h<br><span style="font-size:.4em;opacity:.55">/ 365日</span></div>
       </div>
       <!-- Card C: Summary (light, 1col) -->
       <div class="bc bc-light reveal" style="transition-delay:.15s">
-        <div class="bc-icon bc-icon-l">📋</div>
         <h3 class="bc-title">全通話を自動記録</h3>
         <p class="bc-desc">通話内容・要約・折り返し有無を自動でまとめてスマホに届きます。</p>
         <div class="sum-card">
@@ -824,7 +833,6 @@ footer {
       </div>
       <!-- Card D: Notify (dark, 2col) -->
       <div class="bc bc-dark bc-wide reveal" style="transition-delay:.2s">
-        <div class="bc-icon bc-icon-d">🔔</div>
         <h3 class="bc-title">重要な電話はすぐ通知・転送</h3>
         <p class="bc-desc">問い合わせと判定された電話はリアルタイムでスマホ通知。担当者への転送設定も柔軟に対応します。</p>
         <div class="notify-pills">
@@ -970,42 +978,29 @@ footer {
         <div class="pc-price">¥9,800</div>
         <div class="pc-per">/ 月（税抜）</div>
         <ul class="pc-feats">
-          <li class="pc-feat-item">月300通話まで</li>
+          <li class="pc-feat-item">月100通話まで</li>
           <li class="pc-feat-item">営業電話ブロック</li>
           <li class="pc-feat-item">通話サマリー自動生成</li>
           <li class="pc-feat-item">LINEで通知</li>
           <li class="pc-feat-item">管理画面アクセス</li>
+          <li class="pc-feat-item">折り返しリスト管理</li>
+          <li class="pc-feat-item">電話転送設定</li>
         </ul>
         <a href="https://staging.bellioai.com" class="pc-btn pc-btn-outline">無料で試す</a>
       </div>
       <div class="pc pc-feat reveal" style="transition-delay:.1s">
-        <div class="pc-badge">人気 No.1</div>
+        <div class="pc-badge">おすすめ</div>
         <div class="pc-plan">スタンダードプラン</div>
         <div class="pc-price" style="color:var(--deep)">¥19,800</div>
         <div class="pc-per" style="color:rgba(6,13,26,.5)">/ 月（税抜）</div>
         <ul class="pc-feats">
-          <li class="pc-feat-item">月1,000通話まで</li>
+          <li class="pc-feat-item">月300通話まで</li>
           <li class="pc-feat-item">スタータープランの全機能</li>
-          <li class="pc-feat-item">折り返しリスト管理</li>
-          <li class="pc-feat-item">電話転送設定</li>
+          <li class="pc-feat-item">会話フロー設計</li>
           <li class="pc-feat-item">FAQ自動応答（カスタム）</li>
           <li class="pc-feat-item">優先サポート</li>
         </ul>
         <a href="https://staging.bellioai.com" class="pc-btn pc-btn-dark">無料で試す</a>
-      </div>
-      <div class="pc reveal" style="transition-delay:.2s">
-        <div class="pc-plan">グロースプラン</div>
-        <div class="pc-price">¥29,800</div>
-        <div class="pc-per">/ 月（税抜）</div>
-        <ul class="pc-feats">
-          <li class="pc-feat-item">月通話数無制限</li>
-          <li class="pc-feat-item">スタンダードの全機能</li>
-          <li class="pc-feat-item">アップセル提案機能</li>
-          <li class="pc-feat-item">複数拠点対応</li>
-          <li class="pc-feat-item">API連携（β）</li>
-          <li class="pc-feat-item">専任サポート</li>
-        </ul>
-        <a href="https://staging.bellioai.com" class="pc-btn pc-btn-outline">無料で試す</a>
       </div>
     </div>
     <p style="text-align:center;margin-top:28px;font-size:12.5px;color:rgba(255,255,255,.22);font-family:'Noto Sans JP',sans-serif;position:relative;z-index:1;">
